@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+/* 【全体の背景・テキストなど】 */
+body{
+    background-color : #f3f7fa;
+    padding : 0px;
+    margin : 0px;
+    max-width: : 880px;
+    color: #000000; /* 全体の文字色 */
+}
+
+/* 【リンクの文字色】 */
+a:link { color: #008080; }
+a:visited { color: #008080; }
+a:hover { color: #03938d; }
+a:active { color: #008080; }
+
+header{
+    position: fixed; /* 固定 */
+    text-align : center;
+    padding : 0px 0px 0px 0px;
+    margin : 0px 0px 0px 0px;
+    background-color : rgba(227, 227, 227, 0.95) ; 
+    width : 880px;
+    float : center;
+    /*height : 60px;*/
+    
+}
+
+/* 【グローバルナビゲーション】 */
+gnav{
+    background-color : rgba(248, 224, 170, 0.9);
+    width : 880px;
+    /*height : 50px;*/
+    float : left;
+}
+gnav ul{
+    padding : 5px 0px 5px 0px;
+    margin : 0px 0px 0px 0px;
+    list-style-type : none;
+}
+gnav li{
+    display: inline-block;
+    position: relative; /* IE6用 */
+    font-size : 16px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    padding : 0px 7px 0px 7px;
+}
+gnav a{
+    color : #000000; /* 文字色 */
+    color : white;
+    text-decoration : none;
+    display : block;
+    border-bottom: 2px #2c5170 solid; /* ヘッダメニューの下境界線 */
+}
+gnav a:hover{
+    border-bottom: 2px #f49f19 solid; /* ヘッダメニューの下境界線 */
+}
+
+/* 【ページ内ナビゲーション】 */
+nav{
+    position: fixed; /* 固定 */
+    margin : 100px 0px 0px 0px;
+    width : 177px;
+    /*height : 500px;*/
+    float : left;
+}
+nav ul{
+    padding : 5px 0px 0px 0px;
+    list-style-type : none;
+}
+nav li{
+    font-size : 20px;
+    font-family: "M+ 1c light", Helvetica, Arial, sans-serif;
+    line-height : 2.2em;
+    text-indent : 1em;
+    margin-bottom : 4px;
+    width : 100%;
+}
+nav li.sub{
+    font-size : 14px;
+    margin-left : 0px;
+    padding-left : 0px;
+    line-height : 1.6em;
+    border-left-width : 5px;
+    border-left-style : solid;
+    border-left-color : #45d4fc ;
+}
+nav li.subsub{
+    margin-left : 10px;
+    font-size : 12px;
+    line-height : 1.6em;
+    margin-bottom : 4px;
+}
+nav a{
+    color : white;
+    text-decoration : none;
+    border-width : 0px 0px 2px 0px;
+    border-style : solid;
+    display : block;
+    border-color : #08d4dd;
+}
+nav a:hover{
+    /*background-color : #222222;*/
+    border-color:  #f49f19; /* ヘッダメニューの下境界線 */
+}
+
+
+.main_contents{
+    background-color : #ffffff;
+    padding : 0px 3px 0px 8px;
+    margin : 100px 0px 0px 0px;
+    border-right-width : 0px;
+    border-right-style : solid;
+    border-right-color : none;
+    width : 688px;
+    min-height : 500px;
+    float : right;
+}
+#page{
+    margin-top : 0px;
+    margin-left : auto;
+    margin-right : auto;
+    margin-bottom : 0px;
+    width : 880px;
+    font-family: 'Noto Sans JP', sans-serif;
+    /*font-family: 'Mplus 1c light', sans-serif;*/
+}
+
+footer{
+    font-size : 12px;
+    color : Black;
+    background-color : #ffffff;
+    border-bottom: 5px #336797 solid; /* フッタの下境界線 */
+    height : 25px;
+    padding: 10px 10px 0px 10px; /* フッタのパディング（上下、左右） */
+    clear : both;
+    font-family: "M+ 1c light", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+p{
+    margin : 8px 0px 8px 0px;
+    font-size : 14px;
+    padding-left : 5px;
+    font-family: "M+ 1c light", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color :#000000;
+}
+h0{
+    margin : 20px 0px 10px 0px;
+    font-size : 40px;
+    font-weight: 300;
+    font-family: "M+ 1c light", Helvetica, Arial, sans-serif;
+    color: #000000;
+}
+
+h1{
+    margin : 10px 0px 10px 0px;
+    font-size : 25px;
+    font-family: "M+ 1c regular", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color :#01678d;
+}
+h2{
+    margin : 20px 0px 5px 0px;
+    font-size : 20px;
+    font-family: "M+ 1c regular", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    border-bottom-width : 2px;
+    border-bottom-style : solid;
+    border-bottom-color : #0c7b9a ;
+    color :#000000;
+}
+h3{
+    margin : 20px 0px 5px 0px;
+    padding : 0px 0px 0px 5px;
+    font-size : 20px;
+    font-family: "M+ 1c regular", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    border-left-width : 5px;
+    border-left-style : solid;
+    border-left-color : #45d4fc ;
+    color :#000000;
+}
+a{
+    color :#000000;
+}
+a:hover {
+    color: #52cbed ;
+}
+
+/*試合結果の表*/
+table {
+	width: 90%;
+    border-collapse : collapse;
+}
+th {
+	width: 14%;
+	/*padding: 2px 5px;*/
+	border: solid 1px #666666;
+	color: #000000;
+	background-color: #CFDCE3;
+}
+td {
+	width: 14%;
+	/*padding: 2px 5px;*/
+	border: solid 1px #666666;
+	color: #000000;
+	background-color: #ffffff;
+	text-align: center;
+	vertical-align: middle;
+}
+thead {
+    border-bottom: solid 0px #666666;
+}
+/* 6th total */
+table.total {
+	border-left: solid 1px #666666;
+	border-right: solid 1px #666666;
+	border-top: solid 1px #666666;
+}
+table.total th {
+	padding: 5px 5px;
+	font-size: 120%;
+	border: none;
+}
+th.1 {
+	width: 30%;
+}
+th.2 {
+	width: 40%;
+}
+/* 各大学結果 */
+table.every thead th {
+	padding: 0px 0px;
+	font-size: 150%;
+}
