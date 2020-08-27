@@ -12,27 +12,31 @@ body{
 /* 【リンクの文字色】 */
 a:link { color: #008080; }
 a:visited { color: #008080; }
-a:hover { color: #03938d; }
+a:hover { color: #c4d30c; }
 a:active { color: #008080; }
 
 header{
     position: fixed; /* 固定 */
     text-align : center;
-    padding : 0px 0px 0px 0px;
+    padding : 2px 0px 2px 0px;
     margin : 0px 0px 0px 0px;
-    background-color : rgba(227, 227, 227, 0.95) ; 
-    width : 880px;
+    background-color : rgba(237, 252, 255, 0.92) ;
+    /*background-color : rgba(227, 227, 227, 0.95) ;*/ 
+    /*width : 880px;*/
+    width:100%;
     float : center;
-    /*height : 60px;*/
-    
+    /*height : 30px;*/
 }
 
 /* 【グローバルナビゲーション】 */
 gnav{
+    position: fixed; /* 固定 */
+    padding : 0px 0px 0px 0px;
+    margin : 30px 0px 0px 0px;
     background-color : rgba(248, 224, 170, 0.9);
-    width : 880px;
-    /*height : 50px;*/
-    float : left;
+    width : 100%;
+    /*height : 40px;*/
+    float : center;
 }
 gnav ul{
     padding : 5px 0px 5px 0px;
@@ -44,7 +48,7 @@ gnav li{
     position: relative; /* IE6用 */
     font-size : 16px;
     font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     padding : 0px 7px 0px 7px;
 }
 gnav a{
@@ -52,65 +56,86 @@ gnav a{
     color : white;
     text-decoration : none;
     display : block;
-    border-bottom: 2px #2c5170 solid; /* ヘッダメニューの下境界線 */
+    /*border-bottom: 2px #2c5170 solid; /* ヘッダメニューの下境界線 */
 }
 gnav a:hover{
     border-bottom: 2px #f49f19 solid; /* ヘッダメニューの下境界線 */
 }
 
 /* 【ページ内ナビゲーション】 */
-nav{
+lnav{
     position: fixed; /* 固定 */
-    margin : 100px 0px 0px 0px;
+    margin : 65px 0px 0px 0px;*/
     width : 177px;
     /*height : 500px;*/
     float : left;
 }
-nav ul{
+lnav ul{
     padding : 5px 0px 0px 0px;
     list-style-type : none;
 }
-nav li{
+lnav li{
     font-size : 20px;
     font-family: "M+ 1c light", Helvetica, Arial, sans-serif;
     line-height : 2.2em;
     text-indent : 1em;
     margin-bottom : 4px;
     width : 100%;
+    border-width : 0px 0px 2px 0px;
+    border-style : solid;
+    border-color : #08d4dd;
 }
-nav li.sub{
+lnav li.sub{
     font-size : 14px;
     margin-left : 0px;
     padding-left : 0px;
     line-height : 1.6em;
-    border-left-width : 5px;
+    border-width : 0px 0px 0px 5px; /*親のliと指定を変えている*/
     border-left-style : solid;
     border-left-color : #45d4fc ;
 }
-nav li.subsub{
+lnav li.subsub{
     margin-left : 10px;
     font-size : 12px;
     line-height : 1.6em;
     margin-bottom : 4px;
+    border-width : 0px 0px 0px 0px;
 }
-nav a{
+lnav a{
     color : white;
     text-decoration : none;
-    border-width : 0px 0px 2px 0px;
-    border-style : solid;
     display : block;
-    border-color : #08d4dd;
 }
-nav a:hover{
+lnav a:hover{
     /*background-color : #222222;*/
     border-color:  #f49f19; /* ヘッダメニューの下境界線 */
 }
 
+ol {
+    list-style-type: none;
+    display: flex;
+    font-size : 12px;
+    padding : 0px 0px 0px 0px;
+    margin : 0px 0px 0px 0px;
+    background-color : #f4f4f4 ;
+    width : 100%;
+    height : 20px ;
+    float : center;
+}
+
+ol.breadcrumb li::after {
+    content: ">";
+    margin: 0 10px;
+}
+
+ol.breadcrumb li:last-child::after {
+    content: none;
+}
 
 .main_contents{
     background-color : #ffffff;
-    padding : 0px 3px 0px 8px;
-    margin : 100px 0px 0px 0px;
+    padding : 5px 3px 0px 8px;
+    margin : 65px 0px 0px 0px;
     border-right-width : 0px;
     border-right-style : solid;
     border-right-color : none;
@@ -130,13 +155,13 @@ nav a:hover{
 
 footer{
     font-size : 12px;
-    color : Black;
+    color : #2b8ba8;
     background-color : #ffffff;
     border-bottom: 5px #336797 solid; /* フッタの下境界線 */
     height : 25px;
     padding: 10px 10px 0px 10px; /* フッタのパディング（上下、左右） */
     clear : both;
-    font-family: "M+ 1c light", Helvetica, Arial, sans-serif;
+    font-family: "Mplus 1p", Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
 p{
@@ -149,9 +174,8 @@ p{
 }
 h0{
     margin : 20px 0px 10px 0px;
-    font-size : 40px;
-    font-weight: 300;
-    font-family: "M+ 1c light", Helvetica, Arial, sans-serif;
+    font-size : 20px;
+    font-family: 'Manrope', sans-serif;
     color: #000000;
 }
 
