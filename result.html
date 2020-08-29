@@ -6,9 +6,8 @@
         東京大学運動会アーチェリー部
     </title>
     <link rel="icon" type="image/png" href="icon.png">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <!--<link rel="stylesheet" media="(min-width: 480px)" href="style.css" type="text/css">
-   <link rel="stylesheet" media="(max-width: 480px)" href="style-480.css">-->
+    <link rel="stylesheet" href="parts.css" type="text/css">
+    <link rel="stylesheet" href="layout.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP:wght@100;300;400;600&family=Roboto:wght@100;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
@@ -18,7 +17,7 @@
   <header>
     <h0>Univ. of Tokyo Archery Team</h0>
   </header>
-    <gnav>
+    <gnav class ="stick_gnav">
       <ul>
         <li><a href="http://www.ut-archery.jp/index.html">ホーム</a></li>
         <li><a href="about.html">活動案内</a></li>
@@ -29,8 +28,7 @@
         <li><a href="inquiry.html">お問い合わせ</a></li>
       </ul>
   </gnav>
-<div id="page">
-  <lnav>
+  <lnav class ="stick_lnav">
   <ul>
     <li><a href="result.html">2019年度</a></li>
     <li class="sub"><a href ="#league">リーグ戦形式</a></li>
@@ -47,14 +45,22 @@
     <li><a href="result16.html">2016年度</a></li>
   </ul>
   </lnav>
-  <div class="main_contents">
-          <ol class="breadcrumb">
+  <main>
+    <ol class="breadcrumb">
       <li><a href="ababa">ホーム</a></li>
       <li><a href="abababa">試合結果</a></li>
       <li>2019年度</li>
     </ol>
     <h1>試合結果2019</h1>
-   <div class="section">
+    <profile>
+        <div class="photo"><img src="yoshikawa.png" height ="145px" alt=""border="0">
+        </div>
+        <div class="position">内主務</div>
+        <div class="name">吉川 諒</div>
+        <div class="faculty">所属：工学部 電気電子工学科</div>
+        <div class="school">出身：東京都・麻布高校</div>
+        <div class="comment">HPを作っております。よろしくお願いします。</div>
+    </profile>   
 <h2><a name="m_league">男子リーグ戦</a></h2>
 <h3>第1戦 対早稲田大学(3/31)</h3>
 <table class="total">
@@ -279,7 +285,7 @@
 
 
 
-</div>
+
 
 <div class="section">
 
@@ -820,8 +826,8 @@
 </div>
 
 
-</div>
-</div>
+</main>
+
   <footer>
    Copyright©️ The University of Tokyo Archery Team. All Rights Reserved.
   </footer>
