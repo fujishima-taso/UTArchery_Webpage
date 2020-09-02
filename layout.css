@@ -95,7 +95,7 @@ profile{
     object-fit: contain;
     mix-blend-mode: multiply;
 }
-.position{
+.job{
     grid-area : position; 
     padding : 10px 0px 0px 5px;
     font-weight: 300;

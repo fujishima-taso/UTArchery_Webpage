@@ -5,9 +5,6 @@ a:link { color: #045867; }
 a:visited { color: #045867; }
 a:hover { color: #b2bf0b; }
 a:active { color: #008080; }
-body{
-    -webkit-text-size-adjust:100%;
-}
 header{
     text-align : center;
     padding : auto;
@@ -156,7 +153,6 @@ table.every thead th {
 /*https://techacademy.jp/magazine/19737*/
 
 lnav {
-    z-index : 1;
     height : 40px;
     text-align: center;
 }
@@ -186,7 +182,7 @@ input {
 lnav ul {
     margin: 0px 20px 0px 20px;
     padding: 0;
-    background :#f4f4f4;
+    background :rgba(235, 235, 235, 0.9);
     list-style: none;
     text-align: left;
 }

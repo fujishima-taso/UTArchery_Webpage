@@ -3,6 +3,8 @@
 
 /* 【全体の背景・テキストなど】 */
 body{
+    -webkit-text-size-adjust:100%;
+    padding : 5px;
     display: grid;
     margin: 0;
     color: #000000; /* 全体の文字色 */
@@ -50,15 +52,18 @@ body{
 }*/
 header{
     grid-area : title;
+    z-index : 1;
 }
 
 /* 【グローバルナビゲーション】 */
 gnav{
-    grid-area : gnav;
+    grid-area : gnav;　
 }
 /* 【ページ内ナビゲーション】 */
 lnav{
     grid-area : lnav;
+    z-index : 1;
+    
 }
 
 /* 【パンくずリスト】 */
