@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 /* 【リンクの文字色】 */
-a:link { color: #008080; }
-a:visited { color: #008080; }
-a:hover { color: #c4d30c; }
+a:link { color: #045867; }
+a:visited { color: #045867; }
+a:hover { color: #b2bf0b; }
 a:active { color: #008080; }
 
 header{
@@ -21,27 +21,30 @@ gnav{
     background-color : rgba(255, 245, 225, 0.82);
     border-bottom: 2px #336797 solid; /* フッタの下境界線 */
 }
+
 gnav ul{
     padding : 5px 0px 5px 0px;
     margin : 0px 0px 0px 0px;
     list-style-type : none;
 }
+
 gnav li{
     display: inline-block;
-    position: relative; /* IE6用 */
+    /*position: relative; /* IE6用 */
     font-size : 16px;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 400;
     padding : 0px 7px 0px 7px;
+
 }
 gnav a{
-    color : #000000; /* 文字色 */
-    color : white;
+    color : #0c4155; /* 文字色 */
     text-decoration : none;
     display : block;
     /*border-bottom: 2px #2c5170 solid; /* ヘッダメニューの下境界線 */
 }
 gnav a:hover{
+    color : #0cc3c3;
     border-bottom: 2px #f49f19 solid; /* ヘッダメニューの下境界線 */
 }
 
@@ -51,7 +54,7 @@ lnav{
     width : 177px;
 }
 lnav ul{
-    padding : 5px 0px 0px 0px;
+    padding :0px 0px 0px 0px;
     list-style-type : none;
 }
 /*
@@ -59,7 +62,8 @@ lnav ul{
 */
 lnav li{
     font-size : 20px;
-    font-family: "M+ 1c light", Helvetica, Arial, sans-serif;
+    font-family: "M plus 1p", "Helvetica", sans-serif;
+    font-weight : 300;
     line-height : 2.2em;
     text-indent : 1em;
     margin-bottom : 4px;
@@ -70,6 +74,7 @@ lnav li{
 }
 lnav li.sub{
     font-size : 14px;
+    font-weight : 400;
     margin-left : 0px;
     padding-left : 0px;
     line-height : 1.6em;
@@ -78,6 +83,7 @@ lnav li.sub{
     border-left-color : #45d4fc ;
 }
 lnav li.subsub{
+    font-weight : 400;
     margin-left : 10px;
     font-size : 12px;
     line-height : 1.6em;
@@ -131,14 +137,14 @@ footer{
     border-bottom: 5px #336797 solid; /* フッタの下境界線 */
     padding: 10px 5px 0px 0px; /* フッタのパディング（上下、左右） */
     clear : both;
-    font-family: "Mplus 1p", Helvetica, Arial, sans-serif;
+    font-family: "Mplus 1p", "Helvetica", sans-serif;
     font-weight: 400;
 }
 p{
     margin : 8px 0px 8px 0px;
     font-size : 14px;
     padding-left : 5px;
-    font-family: "M+ 1c light", Helvetica, Arial, sans-serif;
+    font-family: "M plus 1p", "Helvetica", sans-serif;
     font-weight: 300;
     color :#000000;
 }
@@ -151,15 +157,16 @@ h0{
 
 h1{
     margin : 10px 0px 10px 0px;
-    font-size : 25px;
-    font-family: "M+ 1c regular", Helvetica, Arial, sans-serif;
-    font-weight: 400;
+    font-size : 28px;
+    font-family: "M plus 1p", "Helvetica", sans-serif;
+    font-weight: 300;
     color :#01678d;
+/*    border-bottom: 1px #01678d solid;*/
 }
 h2{
     margin : 20px 0px 5px 0px;
     font-size : 20px;
-    font-family: "M+ 1c regular", Helvetica, Arial, sans-serif;
+    font-family: "M+ 1c regular", "Helvetica", sans-serif;
     font-weight: 400;
     border-bottom-width : 2px;
     border-bottom-style : solid;
@@ -170,18 +177,12 @@ h3{
     margin : 20px 0px 5px 0px;
     padding : 0px 0px 0px 5px;
     font-size : 20px;
-    font-family: "M+ 1c regular", Helvetica, Arial, sans-serif;
+    font-family: "M+ 1c regular", "Helvetica", sans-serif;
     font-weight: 400;
     border-left-width : 5px;
     border-left-style : solid;
     border-left-color : #45d4fc ;
     color :#000000;
-}
-a{
-    color :#000000;
-}
-a:hover {
-    color: #52cbed ;
 }
 
 /*試合結果の表*/
