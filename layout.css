@@ -2,6 +2,8 @@
 
 /* 【全体の背景・テキストなど】 */
 body{
+    max-width: 900px;
+    padding : auto;
     display: grid;
     margin: 0;
     color: #000000; /* 全体の文字色 */
@@ -13,7 +15,7 @@ body{
     */
     min-height: 100vh;
     grid-template-rows: 35px 35px 300px 1fr 35px;
-    grid-template-columns : 0.3fr minmax(1fr,800px);
+    grid-template-columns :minmax(0.3fr,200px) minmax(1fr,800px);
     grid-template-areas:
         "title   title" 
         "gnav     gnav"
@@ -24,7 +26,7 @@ body{
 /*MarginとPaddingは各パーツごとに指定することにしているが、
 特に指定のない場合下記のものが優先されると思う。*/
 
-.stick_gnav {
+.stick {
   position: sticky;
   top: 0px;
 }
@@ -82,16 +84,22 @@ profile{
     min-height: 10vh;
     border: 1px #336797 solid;
     grid-template-rows: 45px 30px 30px 40px;
-    grid-template-columns : 150px 200px 300px;
+    grid-template-columns : 120px 200px 300px;
     grid-template-areas:
         "photo position name   " 
         "photo faculty  faculty"
         "photo school   school "
         "photo comment  comment";
 }
+
+/*あくまでプロフ用。*/
+img {
+    width: 120px;
+    height: 145px;
+    object-fit: contain;
+}
 .photo{
     grid-area : photo;
-    height: 120px;
     object-fit: contain;
     mix-blend-mode: multiply;
 }

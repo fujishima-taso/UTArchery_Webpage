@@ -4,7 +4,7 @@
 /* 【全体の背景・テキストなど】 */
 body{
     -webkit-text-size-adjust:100%;
-    padding : 5px;
+    float : center;
     display: grid;
     margin: 0;
     color: #000000; /* 全体の文字色 */
@@ -15,10 +15,11 @@ body{
     そのため、各行、各列の幅を指定してあげる。
     */
     min-height: 100vh;
-    grid-template-rows: 40px 40px 1fr 25px;
+    grid-template-rows: 40px 40px 40px1fr 25px;
     grid-template-columns : 1fr 40px;
     grid-template-areas:
-        "title   gnav"
+        "title   title"
+        "gnav gnav"
         "lnav    lnav"
         "main     main"
         "footer footer";
@@ -57,7 +58,8 @@ header{
 
 /* 【グローバルナビゲーション】 */
 gnav{
-    grid-area : gnav;　
+    grid-area : gnav;
+    z-index : 1;
 }
 /* 【ページ内ナビゲーション】 */
 lnav{
@@ -70,6 +72,7 @@ lnav{
 
 main{
     grid-area : main;
+    padding : 5px;
 }
 
 footer{
@@ -87,12 +90,17 @@ profile{
     /*min-height: 10vh;*/
     border: 1px #336797 solid;
     grid-template-rows: 30px 30px 30px 40px;
-    grid-template-columns : 32% 25% 43%;
+    grid-template-columns : 115px 150px 1fr;
     grid-template-areas:
         "photo job      name   " 
         "photo faculty  faculty"
         "photo school   school "
         "photo comment  comment";
+}
+img {
+    width: 115px;
+    height: 130px;
+    object-fit: contain;
 }
 .photo{
     grid-area : photo;

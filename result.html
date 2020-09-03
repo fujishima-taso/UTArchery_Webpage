@@ -7,10 +7,11 @@
     </title>
     <link rel="icon" type="image/png" href="icon.png">
     
-    <link rel="stylesheet" href="parts_smartphone.css" type="text/css" media="screen and (max-width:480px)">
-    <link rel="stylesheet" href="layout_smartphone.css" type="text/css" media="screen and (max-width:480px)">
-    <link rel="stylesheet" href="parts.css" type="text/css" media="screen and (min-width:480px)">
-    <link rel="stylesheet" href="layout.css" type="text/css" media="screen and (min-width:480px)">
+    <link rel="stylesheet" href="parts_smartphone.css" type="text/css" media="(max-width:700px)">
+    <link rel="stylesheet" href="layout_smartphone.css" type="text/css" media="(max-width:700px)">
+    <link rel="stylesheet" href="parts.css" type="text/css" media="(min-width:701px)">
+    <link rel="stylesheet" href="layout.css" type="text/css" media="(min-width:701px)">
+
     
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP:wght@100;300;400;600&family=Roboto:wght@100;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500&display=swap" rel="stylesheet">
@@ -26,8 +27,8 @@
 <body>
   <header class ="stick">UT-Archery</header>
     <lnav class="stick_lnav">
-    <label for="menu_bar01">ページ内メニュー(クリックしてください)↓</label>
-    <input type="checkbox" id="menu_bar01" class="accordion" />
+<label for="menu_bar01"><div class="hide">    ページ内メニュー(タップしてください)↓</div></label>
+        <input type="checkbox" id="menu_bar01" class="accordion" />
     <ul id="links01">
     <li><a href="result.html">2019年度</a></li>
     <li class="sub"><a href ="#league">リーグ戦形式</a></li>
@@ -43,57 +44,18 @@
     <li><a href="result17.html">2017年度</a></li>
     <li><a href="result16.html">2016年度</a></li>
   </ul>
-</lnav>
-<gnav>
-  <nav>
-    <div class="inner">
-      <ul>
-        <li><a href="http://www.ut-archery.jp/index.html">ホーム</a></li>
-        <li><a href="about.html">活動案内</a></li>
-        <li><a href="prfile.html">部員紹介</a></li>
-        <li class="active"><a href="result.html">試合結果</a></li>
-        <li><a href="record.html">歴代記録</a></li>
-        <li><a href="link.html">リンク</a></li>
-        <li><a href="inquiry.html">お問い合わせ</a></li>
-      </ul>
-    </div>
-  </nav>
-  <div class="toggle_btn">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <div id="mask"></div>
-</gnav>
-    
-   <!-- <gnav class ="stick">
+</lnav>    
+   <gnav class ="stick">
       <ul>
         <li><a href="http://www.ut-archery.jp/index.html">ホーム</a></li>
         <li><a href="about.html">活動案内</a></li>
         <li><a href="profile.html">部員紹介</a></li>
         <li class="active"><a href="result.html">試合結果</a></li>
         <li><a href="record.html">歴代記録</a></li>
-        <li><a href="link.html">リンク</a></li>
+        <!--<li><a href="link.html">リンク</a></li>-->
         <li><a href="inquiry.html">お問い合わせ</a></li>
       </ul>
   </gnav>
-  <lnav class ="stick_lnav">
-  <ul>
-    <li><a href="result.html">2019年度</a></li>
-    <li class="sub"><a href ="#league">リーグ戦形式</a></li>
-    <li class="subsub"><a href ="#m_league">男子リーグ戦</a></li>
-    <li class="subsub"><a href ="#f_league">女子リーグ戦</a></li>
-    <li class="subsub"><a href ="#m_prac">男子練習試合</a></li>
-    <li class="subsub"><a href ="#f_prac">女子練習試合</a></li>    
-    <li class="sub"><a href ="#other">その他形式</a></li>
-    <li class="subsub"><a href ="#kosen">関東学連個人選手権大会</a></li>
-    <li class="subsub"><a href ="#nanadai">全国七大学総合体育大会</a></li>
-    <li class="subsub"><a href ="#others">その他練習試合</a></li>  
-    <li><a href="result18.html">2018年度</a></li>
-    <li><a href="result17.html">2017年度</a></li>
-    <li><a href="result16.html">2016年度</a></li>
-  </ul>
-  </lnav>-->
   <main>
     <ol class="breadcrumb">
       <li><a href="ababa">ホーム</a></li>
@@ -102,7 +64,7 @@
     </ol>
     <h1>試合結果2019</h1>
     <profile>
-        <div class="photo"><img src="yoshikawa.png" height ="130px" alt=""border="0">
+        <div class="photo"><img src="yoshikawa.png" alt=""border="0">
         </div>
         <div class="job">内主務</div>
         <div class="name">吉川 諒</div>
@@ -873,6 +835,13 @@
 	</tbody>
 </table>
 </div>
+
+<h1>お問い合わせ</h1>
+<h2>部室</h2>
+<p>現在部室がありません。何卒ご了承ください。住所宛の宅配便などを受け取ることはできません。</p>
+<h2>SNS・メール</h2>
+<p>ut.archery.shinkan☆gmail.com(☆→@)</p>
+<p><a href="twitter.com/akishin_archery">twitter</a></p>
 
 
 </main>

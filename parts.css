@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+/*PCversionではいらないものを抹殺*/
+.hide {display:none}
+.accordion{display:none}
+
+
 /* 【リンクの文字色】 */
 a:link { color: #045867; }
 a:visited { color: #045867; }
@@ -10,15 +15,17 @@ header{
     text-align : center;
     padding : auto;
     margin : 0px 0px 0px 0px;
-    background-color : rgba(237, 252, 255, 0.92) ;
+    background-color : #bfe3ea ;
     float : center;
+    font-size : 25px;
+    font-family: 'M plus 1p', sans-serif;
 }
 
 /* 【グローバルナビゲーション】 */
 gnav{
     padding : 0px 0px 0px 0px;
-    margin : 0px 0px 0px 5px;
-    background-color : rgba(255, 245, 225, 0.82);
+    margin : 0px 0px 0px 0px;
+    background-color : rgb(255, 245, 225);
     border-bottom: 2px #336797 solid; /* フッタの下境界線 */
 }
 
@@ -37,6 +44,7 @@ gnav li{
     padding : 0px 7px 0px 7px;
 
 }
+
 gnav a{
     color : #0c4155; /* 文字色 */
     text-decoration : none;
@@ -144,15 +152,9 @@ p{
     margin : 8px 0px 8px 0px;
     font-size : 14px;
     padding-left : 5px;
-    font-family: "M plus 1p", "Helvetica", sans-serif;
+    font-family: "Noto Sans JP", "Helvetica", sans-serif;
     font-weight: 300;
     color :#000000;
-}
-h0{
-    margin : 20px 0px 10px 0px;
-    font-size : 20px;
-    font-family: 'Manrope', sans-serif;
-    color: #000000;
 }
 
 h1{
@@ -230,4 +232,39 @@ th.2 {
 table.every thead th {
 	padding: 0px 0px;
 	font-size: 150%;
+}
+
+/* 【グローバルナビゲーション】 */
+gnav{
+    padding : 0px 0px 0px 0px;
+    margin : 0px 0px 0px 0px;
+    background-color : rgb(255, 245, 225);
+    border-bottom: 2px #336797 solid; /* フッタの下境界線 */
+}
+
+gnav ul{
+    padding : 5px 0px 5px 0px;
+    margin : 0px 0px 0px 0px;
+    list-style-type : none;
+}
+
+gnav li{
+    display: inline-block;
+    /*position: relative; /* IE6用 */
+    font-size : 16px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    padding : 0px 7px 0px 7px;
+
+}
+
+gnav a{
+    color : #0c4155; /* 文字色 */
+    text-decoration : none;
+    display : block;
+    /*border-bottom: 2px #2c5170 solid; /* ヘッダメニューの下境界線 */
+}
+gnav a:hover{
+    color : #0cc3c3;
+    border-bottom: 2px #f49f19 solid; /* ヘッダメニューの下境界線 */
 }
