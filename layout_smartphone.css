@@ -2,12 +2,12 @@
 /* 【レスポンシブデザイン_スマートフォンバージョン】 */
 
 /* 【全体の背景・テキストなど】 */
-body{
-    -webkit-text-size-adjust:100%;
-    float : center;
+body {
+    -webkit-text-size-adjust: 100%;
     display: grid;
     margin: 0;
-    color: #000000; /* 全体の文字色 */
+    color: #000000;
+    /* 全体の文字色 */
     font-family: 'Noto Sans JP', sans-serif;
     /*以下がGridの指定。*/
     /*
@@ -15,131 +15,52 @@ body{
     そのため、各行、各列の幅を指定してあげる。
     */
     min-height: 100vh;
-    grid-template-rows: 40px 40px 40px1fr 25px;
-    grid-template-columns : 1fr 40px;
+    grid-template-rows: 35px minmax(0.1fr,35px) 150px 35px 1fr 25px;
+    grid-template-columns: 1fr 40px;
     grid-template-areas:
-        "title   title"
-        "gnav gnav"
-        "lnav    lnav"
-        "main     main"
-        "footer footer";
+        "header     header"
+        "gnav         gnav"
+        "eyecatch eyecatch"
+        "lnav         lnav"
+        "main         main"
+        "footer     footer";
 }
-/*MarginとPaddingは各パーツごとに指定することにしているが、
-特に指定のない場合下記のものが優先されると思う。*/
 
 .stick {
-  position: sticky;
-  top: 0px;
+    position: sticky;
+    top: 0px;
 }
+
 .stick_lnav {
-  position: sticky;
-  top: 40px;
+    position: sticky;
+    top: 35px;
 }
 
-
-/*square{
-    padding : 0px 0px 0px 0px;
-    margin : 0px 0px 0px 0px;
-    background-color : rgb(255, 157, 0) ;
-    color : rgb(255, 157, 0) ;
-    width:100%;
-    height 100%;
-    z-index: -1;
-    position : absolute ;
-    padding:  0px;             /* 余白指定 */
-    /*left:  0px;                /* 左からの位置指定 */
-    /*top: 30px;                  /* 上からの位置指定 */
-    /*float : center;
-}*/
-header{
-    grid-area : title;
-    z-index : 1;
+header {
+    grid-area: header;
+    z-index: 1;
 }
 
 /* 【グローバルナビゲーション】 */
-gnav{
-    grid-area : gnav;
-    z-index : 1;
+gnav {
+    grid-area: gnav;
+    z-index: 1;
 }
+
 /* 【ページ内ナビゲーション】 */
-lnav{
-    grid-area : lnav;
-    z-index : 1;
-    
+lnav {
+    grid-area: lnav;
+    z-index: 1;
+
 }
 
 /* 【パンくずリスト】 */
 
-main{
-    grid-area : main;
-    padding : 5px;
+main {
+    grid-area: main;
+    padding: 5px;
 }
 
-footer{
-    grid-area : footer;
-}
-
-/*以下、プロフィールの設定*/
-profile{
-    float : center;
-    display: grid;
-    margin: 0;
-    color: #000000; /* 全体の文字色 */
-    font-family: 'Noto Sans JP', sans-serif;
-    background-color : rgba(232, 244, 247, 0.92) ;
-    /*min-height: 10vh;*/
-    border: 1px #336797 solid;
-    grid-template-rows: 30px 30px 30px 40px;
-    grid-template-columns : 115px 150px 1fr;
-    grid-template-areas:
-        "photo job      name   " 
-        "photo faculty  faculty"
-        "photo school   school "
-        "photo comment  comment";
-}
-img {
-    width: 115px;
-    height: 130px;
-    object-fit: contain;
-}
-.photo{
-    grid-area : photo;
-    height: 100px;
-    object-fit: contain;
-    mix-blend-mode: multiply;
-}
-.job{
-    grid-area : job; 
-    padding : 10px 0px 0px 5px;
-    font-weight: 300;
-    font-size : 15px;
-    border-bottom: 2px #336797 solid;
-    color : rgb(15, 58, 96)
-}
-.name{
-    grid-area : name;   
-    font-weight: 100;
-    font-size : 20px;
-    padding : 0px 0px 0px 5px;
-    font-weight: 300;
-    border-bottom: 2px #336797 solid;
-    color : rgb(15, 58, 96)
-}
-.faculty{
-    grid-area : faculty;
-    font-weight: 400;
-    font-size : 13px;
-    padding : 0px 0px 0px 5px;
-}
-.school{
-    grid-area : school;  
-    font-weight: 400;
-    font-size : 13px;
-    padding : 0px 0px 0px 5px;
-}
-.comment{
-    grid-area : comment;
-    font-weight: 400;
-    font-size : 11px;
-    padding : 0px 0px 0px 5px;
+footer {
+    grid-area: footer;
 }
