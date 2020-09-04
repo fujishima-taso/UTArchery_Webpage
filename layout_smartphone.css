@@ -1,9 +1,9 @@
 @charset "UTF-8";
+/* 【レスポンシブデザイン_スマートフォンバージョン】 */
 
 /* 【全体の背景・テキストなど】 */
 body {
-    max-width: 900px;
-    padding: auto;
+    -webkit-text-size-adjust: 100%;
     display: grid;
     margin: 0;
     color: #000000;
@@ -15,19 +15,16 @@ body {
     そのため、各行、各列の幅を指定してあげる。
     */
     min-height: 100vh;
-    grid-template-rows: 35px 35px 220px 300px 1fr 35px;
-    grid-template-columns: minmax(0.3fr, 200px) minmax(1fr, 800px);
+    grid-template-rows: 35px minmax(0.1fr,35px) 150px 35px 1fr 25px;
+    grid-template-columns: 1fr 40px;
     grid-template-areas:
         "header     header"
         "gnav         gnav"
         "eyecatch eyecatch"
-        "lnav         main"
-        ".            main"
+        "lnav         lnav"
+        "main         main"
         "footer     footer";
 }
-
-/*MarginとPaddingは各パーツごとに指定することにしているが、
-特に指定のない場合下記のものが優先されると思う。*/
 
 .stick {
     position: sticky;
@@ -36,27 +33,32 @@ body {
 
 .stick_lnav {
     position: sticky;
-    top: 40px;
+    top: 35px;
 }
 
 header {
     grid-area: header;
+    z-index: 1;
 }
 
 /* 【グローバルナビゲーション】 */
 gnav {
     grid-area: gnav;
+    z-index: 1;
 }
 
 /* 【ページ内ナビゲーション】 */
 lnav {
     grid-area: lnav;
+    z-index: 1;
+
 }
 
 /* 【パンくずリスト】 */
 
 main {
     grid-area: main;
+    padding: 5px;
 }
 
 footer {
