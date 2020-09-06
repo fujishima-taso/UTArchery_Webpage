@@ -23,7 +23,7 @@ body {
     そのため、各行、各列の幅を指定してあげる。
     */
     min-height: 100vh;
-    grid-template-rows: 35px 35px 220px 300px 1fr 35px ;
+    grid-template-rows: 35px 35px 220px 300px 1fr 80px ;
     grid-template-columns:200px minmax(500px,1fr);
     grid-template-areas:
         "header     header"
