@@ -28,6 +28,7 @@ a:active {
 }
 
 header {
+    grid-area: header;
     text-align: center;
     padding: auto;
     margin: 0px 0px 0px 0px;
@@ -39,6 +40,7 @@ header {
 
 /* 【グローバルナビゲーション】 */
 gnav {
+    grid-area: gnav;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
     background-color: rgb(255, 245, 225);
@@ -90,8 +92,28 @@ eyecatch {
     font-weight: 400;
     font-size: 30px;
     color: #ffffff;
-    overflow: hidden;
+    /*overflow: hidden;*/
     position:relative;
+}
+
+eyecatch a:link {
+    color: #ffffff;
+    text-decoration:none;
+}
+
+eyecatch a:visited {
+    color: #ffffff;
+    text-decoration:none;
+}
+
+eyecatch :hover {
+    color: #307e00;
+    text-decoration:none;
+}
+
+eyecatch a:active {
+    color: #ffffff;
+    text-decoration:none;
 }
 
 .pagetitle {
@@ -115,6 +137,8 @@ eyecatch {
 
 /* 【ページ内ナビゲーション】 */
 lnav {
+    background-color: #ffffff;
+    grid-area: lnav;
     margin: 0px 2px 0px 5px;
     width: 177px;
 }
@@ -196,6 +220,7 @@ ol.breadcrumb li:last-child::after {
 }
 
 main {
+    grid-area: main;
     background-color: #ffffff;
     padding: 5px 3px 0px 8px;
     margin: 0px 0px 0px 0px;
@@ -205,6 +230,7 @@ main {
 }
 
 footer {
+    grid-area: footer;
     font-size: 12px;
     color: #2b8ba8;
     background-color: #ffffff;
@@ -260,7 +286,7 @@ h3 {
 
 /*試合結果の表*/
 table {
-    width: 90%;
+    width: 100%;
     border-collapse: collapse;
 }
 
@@ -363,8 +389,8 @@ profile {
     background-color: rgba(232, 244, 247, 0.92);
     min-height: 10vh;
     border: 1px #336797 solid;
-    grid-template-rows: 45px 30px 30px 40px;
-    grid-template-columns: 120px 200px 300px;
+    grid-template-rows: 45px 30px 30px minmax(40px,1fr);
+    grid-template-columns: 120px 200px 1fr;
     grid-template-areas:
         "photo position name   "
         "photo faculty  faculty"
@@ -375,16 +401,10 @@ profile {
 /*あくまでプロフ用。*/
 .photo_profile {
     width: 120px;
-    height: 145px;
+    height:145px;
+    /*height: 145px;*/
     object-fit: contain;
     position: relative;
-    z-index: -1;
-}
-
-.photo {
-    grid-area: photo;
-    object-fit: contain;
-    mix-blend-mode: multiply;
 }
 
 .job {

@@ -18,6 +18,8 @@ a:active {
 }
 
 header {
+    grid-area: header;
+    z-index: 1;
     text-align: center;
     padding: auto;
     font-size: 24px;
@@ -50,6 +52,8 @@ ol.breadcrumb li:last-child::after {
 }
 
 main {
+    grid-area: main;
+    padding: 5px;
     background-color: #ffffff;
     padding: 5px 3px 0px 8px;
     margin: 0px 0px 0px 0px;
@@ -59,6 +63,7 @@ main {
 }
 
 footer {
+    grid-area: footer;
     font-size: 12px;
     color: #2b8ba8;
     background-color: #ffffff;
@@ -180,6 +185,8 @@ table.every thead th {
 /*https://techacademy.jp/magazine/19737*/
 
 lnav {
+    grid-area: lnav;
+    z-index: 1;
     height: 40px;
     text-align: center;
 }
@@ -245,6 +252,8 @@ lnav li subsub {
 
 /* 【グローバルナビゲーション】 */
 gnav {
+    grid-area: gnav;
+    z-index: 1;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
     background-color: rgb(255, 245, 225);
@@ -294,6 +303,25 @@ eyecatch {
     grid-area: eyecatch;
     overflow: hidden;
     position:relative;
+}
+eyecatch a:link {
+    color: #ffffff;
+    text-decoration:none;
+}
+
+eyecatch a:visited {
+    color: #ffffff;
+    text-decoration:none;
+}
+
+eyecatch :hover {
+    color: #307e00;
+    text-decoration:none;
+}
+
+eyecatch a:active {
+    color: #ffffff;
+    text-decoration:none;
 }
 
 .pagetitle {
@@ -386,3 +414,36 @@ profile {
     font-size: 11px;
     padding: 0px 0px 0px 5px;
 }
+
+/*スマホ限定*/
+backtotop{
+    position:absolute;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    width:50px;
+    height: 50px;
+	border-radius: 50%;/*角丸*/
+    text-align: center;
+    background-color: rgba(134, 214, 25, 0.55);
+    border:1px rgba(134, 214, 25) solid;
+    color:#ffffff;
+    font-size:32px;
+    font-family: "M plus 1p",sans-serif;
+    font-weight: 500;
+}
+    backtotop a:link {
+        color: #ffffff;
+    }
+
+    backtotop a:visited {
+        color: #ffffff;
+    }
+
+    backtotop :hover {
+        color: #307e00;
+    }
+
+    backtotop a:active {
+        color: #ffffff;
+    }

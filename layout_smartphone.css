@@ -35,32 +35,3 @@ body {
     position: sticky;
     top: 35px;
 }
-
-header {
-    grid-area: header;
-    z-index: 1;
-}
-
-/* 【グローバルナビゲーション】 */
-gnav {
-    grid-area: gnav;
-    z-index: 1;
-}
-
-/* 【ページ内ナビゲーション】 */
-lnav {
-    grid-area: lnav;
-    z-index: 1;
-
-}
-
-/* 【パンくずリスト】 */
-
-main {
-    grid-area: main;
-    padding: 5px;
-}
-
-footer {
-    grid-area: footer;
-}

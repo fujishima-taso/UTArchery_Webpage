@@ -1,12 +1,20 @@
 @charset "UTF-8";
 
+html{
+    /*background: #ffffff;*/
+    display : grid;
+    justify-content: center;
+}
+
 /* 【全体の背景・テキストなど】 */
 body {
-    max-width: 900px;
+    max-width: 1000px;
     padding: auto;
     display: grid;
+    justify-content: center;
     margin: 0;
     color: #000000;
+    background-color: #ffffff;
     /* 全体の文字色 */
     font-family: 'Noto Sans JP', sans-serif;
     /*以下がGridの指定。*/
@@ -15,8 +23,8 @@ body {
     そのため、各行、各列の幅を指定してあげる。
     */
     min-height: 100vh;
-    grid-template-rows: 35px 35px 220px 300px 1fr 35px;
-    grid-template-columns: minmax(0.3fr, 200px) minmax(1fr, 800px);
+    grid-template-rows: 35px 35px 220px 300px 1fr 35px ;
+    grid-template-columns:200px minmax(500px,1fr);
     grid-template-areas:
         "header     header"
         "gnav         gnav"
@@ -37,28 +45,4 @@ body {
 .stick_lnav {
     position: sticky;
     top: 40px;
-}
-
-header {
-    grid-area: header;
-}
-
-/* 【グローバルナビゲーション】 */
-gnav {
-    grid-area: gnav;
-}
-
-/* 【ページ内ナビゲーション】 */
-lnav {
-    grid-area: lnav;
-}
-
-/* 【パンくずリスト】 */
-
-main {
-    grid-area: main;
-}
-
-footer {
-    grid-area: footer;
 }
