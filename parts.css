@@ -382,7 +382,6 @@ gnav a:hover {
 profile {
     float: center;
     display: grid;
-    display: -ms-grid;    
     margin: 0;
     color: #000000;
     /* 全体の文字色 */
@@ -392,8 +391,6 @@ profile {
     border: 1px #336797 solid;
     grid-template-rows: 45px 30px 30px minmax(40px,1fr);
     grid-template-columns: 120px 200px 1fr;
-    -ms-grid-rows:45px 30px 30px 1fr;
-    ms-grid-columns: 120px 200px 1fr;
     grid-template-areas:
         "photo position name   "
         "photo faculty  faculty"

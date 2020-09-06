@@ -3,7 +3,6 @@
 html{
     /*background: #ffffff;*/
     display : grid;
-    display: -ms-grid;
     justify-content: center;
 }
 
@@ -12,7 +11,6 @@ body {
     max-width: 1000px;
     padding: auto;
     display: grid;
-    display: -ms-grid;
     justify-content: center;
     margin: 0;
     color: #000000;
@@ -27,8 +25,6 @@ body {
     min-height: 100vh;
     grid-template-rows: 35px 35px 220px 300px 1fr 35px ;
     grid-template-columns:200px minmax(500px,1fr);
-    -ms-grid-rows:35px 35px 220px 300px 1fr 35px;
-    -ms-grid-columns:200px 1fr;
     grid-template-areas:
         "header     header"
         "gnav         gnav"
