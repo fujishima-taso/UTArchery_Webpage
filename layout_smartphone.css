@@ -5,6 +5,7 @@
 body {
     -webkit-text-size-adjust: 100%;
     display: grid;
+    display: -ms-grid;
     margin: 0;
     color: #000000;
     /* 全体の文字色 */
@@ -13,10 +14,13 @@ body {
     /*
     今回はtemplate-areasに指定してあるような構成なので、四行二列。
     そのため、各行、各列の幅を指定してあげる。
+    -ms-はIE専用
     */
     min-height: 100vh;
     grid-template-rows: 35px minmax(0.1fr,35px) 150px 35px 1fr 25px;
+    -ms-grid-rows: 35px 35px 150px 35px 1fr 25px;
     grid-template-columns: 1fr 40px;
+    -ms-grid-rows: 1fr 40px;
     grid-template-areas:
         "header     header"
         "gnav         gnav"

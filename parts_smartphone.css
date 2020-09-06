@@ -346,6 +346,7 @@ eyecatch a:active {
 profile {
     float: center;
     display: grid;
+    display: -ms-grid;
     margin: 0;
     color: #000000;
     /* 全体の文字色 */
