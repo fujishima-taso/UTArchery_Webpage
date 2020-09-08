@@ -1,20 +1,12 @@
 @charset "UTF-8";
-
-html{
-    /*background: #ffffff;*/
-    display : grid;
-    justify-content: center;
-}
+/* 【レスポンシブデザイン_スマートフォンバージョン】 */
 
 /* 【全体の背景・テキストなど】 */
 body {
-    max-width: 1000px;
-    padding: auto;
+    -webkit-text-size-adjust: 100%;
     display: grid;
-    justify-content: center;
     margin: 0;
     color: #000000;
-    background-color: #ffffff;
     /* 全体の文字色 */
     font-family: 'Noto Sans JP', sans-serif;
     /*以下がGridの指定。*/
@@ -23,19 +15,15 @@ body {
     そのため、各行、各列の幅を指定してあげる。
     */
     min-height: 100vh;
-    grid-template-rows: 35px 35px 220px 300px 1fr 120px ;
-    grid-template-columns:200px minmax(500px,1fr);
+    grid-template-rows: 35px minmax(0.1fr,35px) 150px 1fr 120px;
+    grid-template-columns: 1fr 40px;
     grid-template-areas:
         "header     header"
         "gnav         gnav"
         "eyecatch eyecatch"
-        "lnav         main"
-        ".            main"
+        "main         main"
         "footer     footer";
 }
-
-/*MarginとPaddingは各パーツごとに指定することにしているが、
-特に指定のない場合下記のものが優先されると思う。*/
 
 .stick {
     position: sticky;
@@ -44,5 +32,5 @@ body {
 
 .stick_lnav {
     position: sticky;
-    top: 40px;
+    top: 35px;
 }

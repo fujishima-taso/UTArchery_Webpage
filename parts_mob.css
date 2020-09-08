@@ -57,9 +57,6 @@ main {
     background-color: #ffffff;
     padding: 5px 3px 0px 8px;
     margin: 0px 0px 0px 0px;
-    border-right-width: 0px;
-    border-right-style: solid;
-    border-right-color: none;
 }
 
 footer {
@@ -92,17 +89,26 @@ p {
     margin: 8px 0px 8px 0px;
     font-size: 13px;
     padding-left: 5px;
-    font-family: "M plus 1p", "Helvetica", sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     font-weight: 300;
     color: #000000;
 }
 
-h0 {
+main li{
+    margin: 8px 0px 8px 0px;
+    font-size: 13px;
+    padding-left: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    color: #000000;
+}
+
+/*h0 {
     margin: 20px 0px 10px 0px;
     font-size: 20px;
     font-family: 'Manrope', sans-serif;
     color: #000000;
-}
+}*/
 
 h1 {
     margin: 5px 0px 8px 0px;
@@ -303,6 +309,12 @@ gnav a:hover {
     /* ヘッダメニューの下境界線 */
 }
 
+eyecatch {
+    grid-area: eyecatch;
+    overflow: hidden;
+    position:relative;
+}
+
 .photo_eyecatch {
     width: 100%;
     height: 150px;
@@ -311,11 +323,23 @@ gnav a:hover {
     z-index: -2;
 }
 
-eyecatch {
-    grid-area: eyecatch;
-    overflow: hidden;
-    position:relative;
+.pagetitle {
+    height: 130px;
+    width:calc(100% - 20px);
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position : absolute;
+    top:5px;
+    left:5px;
+    font-family: "M plus 1p",sans-serif;
+    font-weight: 500;
+    font-size : 45px;
+    border: 5px #1fb0cb solid;
+    z-index: -1;
 }
+
 eyecatch a:link {
     color: #ffffff;
     text-decoration:none;
@@ -336,24 +360,6 @@ eyecatch a:active {
     text-decoration:none;
 }
 
-.pagetitle {
-    height: 100px;
-    width:88%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-    padding: auto;
-    border: 6px #1fb0cb solid;
-    color: #ffffff;
-    font-family: "M plus 1p",sans-serif;
-    font-weight: 500;
-    font-size : 40px;
-    position : absolute;
-    top:5px;
-    left:5px;
-    z-index: -1;
-}
 /*以下、プロフィールの設定*/
 profile {
     float: center;
@@ -378,13 +384,6 @@ profile {
     width: 115px;
     height: 130px;
     object-fit: contain;
-}
-
-.photo {
-    grid-area: photo;
-    height: 100px;
-    object-fit: contain;
-    mix-blend-mode: multiply;
 }
 
 .job {

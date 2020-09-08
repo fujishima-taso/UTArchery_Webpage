@@ -78,6 +78,12 @@ gnav a:hover {
     /* ヘッダメニューの下境界線 */
 }
 
+eyecatch {
+    grid-area: eyecatch;
+    overflow: hidden;
+    position:relative;
+}
+
 .photo_eyecatch {
     width: 100%;
     height: 220px;
@@ -86,14 +92,21 @@ gnav a:hover {
     z-index: -2;
 }
 
-eyecatch {
-    grid-area: eyecatch;
-    font-family: "M plus 1p";
-    font-weight: 400;
-    font-size: 30px;
-    color: #ffffff;
-    /*overflow: hidden;*/
-    position:relative;
+.pagetitle {
+    height: 190px;
+    width:calc(100% - 30px);
+    margin : 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position : absolute;
+    top:10px;
+    left:10px;
+    font-family: "M plus 1p",sans-serif;
+    font-weight: 500;
+    font-size : 60px;
+    border: 5px #1fb0cb solid;
+    z-index: -1;
 }
 
 eyecatch a:link {
@@ -114,25 +127,6 @@ eyecatch :hover {
 eyecatch a:active {
     color: #ffffff;
     text-decoration:none;
-}
-
-.pagetitle {
-    height: 170px;
-    width:95%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-    padding: auto;
-    border: 6px #1fb0cb solid;
-    color: #ffffff;
-    font-family: "M plus 1p",sans-serif;
-    font-weight: 500;
-    font-size : 60px;
-    position : absolute;
-    top:5px;
-    left:5px;
-    z-index: -1;
 }
 
 /* 【ページ内ナビゲーション】 */
@@ -224,9 +218,6 @@ main {
     background-color: #ffffff;
     padding: 5px 3px 0px 8px;
     margin: 0px 0px 0px 0px;
-    /*border-right-width: 0px;
-    border-right-style: solid;
-    border-right-color: none;*/
 }
 
 footer {
@@ -254,11 +245,20 @@ footer {
     text-decoration:none;
 }
 
+main li{
+    padding-left: 5px;
+    font-size: 14px;
+    padding-left: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    color: #000000;
+}
+
 p {
     margin: 8px 0px 8px 0px;
     font-size: 14px;
     padding-left: 5px;
-    font-family: "Noto Sans JP", "Helvetica", sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     font-weight: 300;
     color: #000000;
 }
@@ -413,7 +413,6 @@ profile {
 .photo_profile {
     width: 120px;
     height:145px;
-    /*height: 145px;*/
     object-fit: contain;
     position: relative;
 }
