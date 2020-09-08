@@ -414,7 +414,7 @@ profile {
     width: 120px;
     height:145px;
     object-fit: contain;
-    position: relative;
+    /*position: relative;*/
 }
 
 .job {
