@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--ページ情報(タブ部)-->
+    <title>活動案内</title>
+    <link rel="icon" type="image/png" href="img/icon.svg">
+    <!--スタイルシートの読み込み-->
+    <style type="text/css"></style>
+    <link rel="stylesheet" href="css/parts_mob.css" type="text/css" media="(max-width:700px)">
+    <link rel="stylesheet" href="css/layout_mob.css" type="text/css" media="(max-width:700px)">
+    <link rel="stylesheet" href="css/parts.css" type="text/css" media="(min-width:701px)">
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="(min-width:701px)">
+    <!--Webフォント読み込み-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP:wght@100;300;400;600&family=Roboto:wght@100;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <!--twitterカードの設定-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@akishin_archery">
+    <meta name="twitter:title" content="東京大学運動会洋弓部">
+    <meta name="twitter:description" content="東京大学運動会洋弓部の公式HPです。">
+    <meta name="twitter:image" content="img/card.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177519445-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-177519445-1');
+    </script>
+</head>
+<!--スマホでのみ、ページ上部に戻るボタンを出す/body外に置く-->
+<backtotop class="hide"><a href="#top">↑</a></backtotop>
+
+<body>
+    <!--ヘッダ-->
+    <header class="stick"><img src="img/logo.svg" height=20px></header>
+
+    <!--ページ間遷移メニュー-->
+    <gnav class="stick">
+        <ul>
+            <li><a href="../index.html">ホーム</a></li>
+            <li><a href="about.html">活動案内</a></li>
+            <li><a href="profile.html">部員紹介</a></li>
+            <li class="active"><a href="result.html">試合結果</a></li>
+            <li><a href="record.html">歴代記録</a></li>
+            <li><a href="inquiry.html">お問い合わせ</a></li>
+        </ul>
+    </gnav>
+
+    <!--タイトル-->
+    <eyecatch>
+        <img src="img/profile.png" alt="" border="0" class="photo_eyecatch">
+        <div class="pagetitle"><a href="top">部員紹介</a>
+        </div>
+    </eyecatch>
+
+    <!--ページ内遷移メニュー/不要なページもある-->
+    <lnav class="stick_lnav">
+        <label for="menu_bar01">
+            <div class="hide">ページ内メニュー(タップしてください) ▼</div>
+        </label>
+        <input type="checkbox" id="menu_bar01" class="accordion" />
+        <ul id="links01">
+            <li><a href="#event">年間予定</a></li>
+            <li><a href="#history">歴史</a></li>
+        </ul>
+    </lnav>
+
+    <!--本体-->
+    <main>
+        <ol class="breadcrumb">
+            <li><a href="../index.html">ホーム</a></li>
+            <li>活動案内</li>
+        </ol>
+        <h1 class="pageTitle">活動案内</h1>
+
+        <h2><a id="event">年間予定</a></h2>
+
+        <div class="event">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <td>試合予定</td>
+                        <td colspan="2">練習予定</td>
+                        <td>1年生</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>4月</th>
+                        <td>リーグ戦</td>
+                        <td rowspan="12">公式練習</td>
+                        <td></td>
+                        <td>新歓コンパ</td>
+                    </tr>
+                    <tr>
+                        <th>5月</th>
+                        <td></td>
+                        <td></td>
+                        <td>新歓合宿</td>
+                    </tr>
+                    <tr>
+                        <th>6月</th>
+                        <td>2年生戦</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>7月</th>
+                        <td>国公立定期戦</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>8月</th>
+                        <td>個選予選・本選</td>
+                        <td>夏合宿</td>
+                        <td>夏合宿</td>
+                    </tr>
+                    <tr>
+                        <th>9月</th>
+                        <td>七大戦</td>
+                        <td>秋合宿<br>OB射会</td>
+                        <td>秋合宿<br>OB射会</td>
+                    </tr>
+                    <tr>
+                        <th>10月</th>
+                        <td>六大学定期戦</td>
+                        <td></td>
+                        <td>六大学新人戦<br>国公立新人戦</td>
+                    </tr>
+                    <tr>
+                        <th>11月</th>
+                        <td>練習試合</td>
+                        <td></td>
+                        <td>学連新人戦<br>練習試合</td>
+                    </tr>
+                    <tr>
+                        <th>12月</th>
+                        <td>学連インドア</td>
+                        <td>納射会</td>
+                        <td>学連インドア</td>
+                    </tr>
+                    <tr>
+                        <th>1月</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>2月</th>
+                        <td>練習試合</td>
+                        <td>冬合宿</td>
+                        <td>練習試合<br>冬合宿</td>
+                    </tr>
+                    <tr>
+                        <th>3月</th>
+                        <td>リーグ戦</td>
+                        <td>春合宿</td>
+                        <td>春合宿<br>リーグ戦</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h2><a id="history">歴史</a></h2>
+        <div class="history">
+            <table>
+                <tr>
+                    <th width="30">1973</th>
+                    <td>初代主将小菅邦夫を中心として東京教育大学(現筑波大学)及び東京女子大学の指導の下に発足。経済学部加藤三郎教授を部長にお迎えする</td>
+                </tr>
+                <tr>
+                    <th>1975</th>
+                    <td>上記2校の指導から自立</td>
+                </tr>
+                <tr>
+                    <th>1976</th>
+                    <td>関東国公立大学アーチェリー大会を筑波大学とともに主催</td>
+                </tr>
+                <tr>
+                    <th>1978</th>
+                    <td>京都大学戦開始。元全日本選抜チームメイトの猪野哲生氏を監督に迎える。関東学生アーチェリー連盟準加盟。</td>
+                </tr>
+                <tr>
+                    <th>1979</th>
+                    <td>準加盟リーグ戦参加 。五大学戦(東大、北大、京大、京府大、阪大)開始 。
+                        <br>三校定期戦(東大、横浜国立大、横浜市立大)開始
+                    </td>
+                </tr>
+                <tr>
+                    <th>1980</th>
+                    <td>準加盟リーグ戦優勝。</td>
+                </tr>
+                <tr>
+                    <th>1981</th>
+                    <td>本加盟リーグ戦参加、Bブロック5校中3位。</td>
+                </tr>
+                <tr>
+                    <th>1982</th>
+                    <td>男子リーグ戦4部Bブロック優勝(3戦全勝)、入替戦1位、3部昇格。国公立戦優勝。<br>
+                        第10期 住田真一郎 全日本アーチェリー選手権大会13位 ナショナルチーム入り。</td>
+                </tr>
+                <tr>
+                    <th>1983</th>
+                    <td>男子リーグ戦3部Bブロック2位(3勝2敗)、2部昇格。</td>
+                </tr>
+                <tr>
+                    <th>1984</th>
+                    <td>男子リーグ戦2部Bブロック5位(2勝3敗)<br>
+                        東京大学運動会に総務部直轄部として加盟。</td>
+                </tr>
+                <tr>
+                    <th>1985</th>
+                    <td>男子リーグ戦2部Aブロック5位(1勝4敗)</td>
+                </tr>
+                <tr>
+                    <th>1986</th>
+                    <td>男子リーグ戦2部Bブロック2位(4勝1敗)、1部昇格<br>
+                        六大学戦(上記五大学に九大が加わる)優勝。三校戦優勝。</td>
+                </tr>
+                <tr>
+                    <th>1987</th>
+                    <td>男子リーグ戦1部Bブロック4位(2勝3敗)。六大学戦優勝。三校戦優勝。<br>
+                        第15期 小澤純史 沖縄国体出場44位</td>
+                </tr>
+                <tr>
+                    <th>1988</th>
+                    <td>男子リーグ戦1部Bブロック2位(4勝1敗)。<br>
+                        国立総合七大学総合体育大会(七大戦)優勝。<br>
+                        第16期 古田善也 京都国体出場39位、全日本アーチェリー選手権大会44位</td>
+                </tr>
+                <tr>
+                    <th>1989</th>
+                    <td>男子リーグ戦1部Aブロック2位(4勝1敗)</td>
+                </tr>
+                <tr>
+                    <th>1990</th>
+                    <td>男子リーグ戦1部Aブロック2位(4勝1敗)。<br>
+                        女子部リーグ戦３部Ｂブロック優勝(5戦全勝)。<br>
+                        第18期 岡田浩明 福岡国体出場18位<br>
+                        工学部松本洋一郎助教授(現教授)を新部長にお迎えする。東京大学運動会に加入</td>
+                </tr>
+                <tr>
+                    <th>1991</th>
+                    <td>男子リーグ戦1部Aブロック3位(3勝2敗)。<br>
+                        女子リーグ戦2部Bブロック3位(5戦3勝2敗)。<br>
+                        七大戦優勝</td>
+                </tr>
+                <tr>
+                    <th>1992</th>
+                    <td>男子リーグ戦1部Bブロック2位(3勝2敗)。<br>
+                        女子リーグ戦2部Bブロック2位(5戦4勝1敗)、1部昇格。<br>
+                        七大戦優勝</td>
+                </tr>
+                <tr>
+                    <th>1993</th>
+                    <td>男子リーグ戦1部ブロック2位(4勝1敗)。<br>
+                        女子リーグ戦1部Bブロック2位(5戦4勝1敗)。<br>
+                        国公立戦優勝</td>
+                </tr>
+                <tr>
+                    <th>1994</th>
+                    <td>男子リーグ戦1部ブロック2位(4勝1敗)<br>
+                        女子リーグ戦1部ブロック4位(5戦2勝3敗)</td>
+                </tr>
+                <tr>
+                    <th>1995</th>
+                    <td>男子リーグ戦1部Bブロック4位(2勝3敗)<br>
+                        女子リーグ戦1部Aブロック5位(5戦1勝4敗)</td>
+                </tr>
+                <tr>
+                    <th>1996</th>
+                    <td>男子リーグ戦1部Aブロック4位(3勝2敗)<br>
+                        女子リーグ戦1部Aブロック5位(5戦1勝4敗)、2部降格。</td>
+                </tr>
+                <tr>
+                    <th>1997</th>
+                    <td>男子リーグ戦1部ブロック2位(4勝1敗)<br>
+                        女子リーグ戦2部ブロック1位(5勝0敗)、1部昇格。<br>
+                        国公立王座優勝。</td>
+                </tr>
+                <tr>
+                    <th>2000</th>
+                    <td>男子リーグ戦1部(3勝2敗)、女子リーグ戦1部(3勝2敗)<br>
+                        国公立王座男女優勝。六大学戦女子優勝。<br>
+                        第29期 松山靖 インカレ5位、東西対抗戦東軍2位。</td>
+                </tr>
+                <tr>
+                    <th>2001</th>
+                    <td>第28期 高野智帆 東日本大会優勝。<br>
+                        第29期 松山靖 東日本大会優勝、全日インドア8位。</td>
+                </tr>
+                <tr>
+                    <th>2003</th>
+                    <td>男子リーグ戦1部ブロック5位(2勝3敗)、女子リーグ戦(3勝2敗)。<br>
+                        国公立王座、七大戦優勝。</td>
+                </tr>
+                <tr>
+                    <th>2005</th>
+                    <td>男子リーグ戦1部 2部降格。</td>
+                </tr>
+                <tr>
+                    <th>2006</th>
+                    <td>男子リーグ戦2部 ブロック5位(1勝4敗)、女子リーグ戦3部3位(1勝2敗)。</td>
+                </tr>
+                <tr>
+                    <th>2007</th>
+                    <td>男子リーグ戦2部 ブロック2位(4勝1敗)。</td>
+                </tr>
+                <tr>
+                    <th>2008</th>
+                    <td>男子リーグ戦2部 ブロック4位(2勝3敗)。六大学2年生戦優勝。</td>
+                </tr>
+                <tr>
+                    <th>2017</th>
+                    <td>男子リーグ戦2部 ブロック優勝(5勝0敗)、1部昇格。
+                        <br>女子リーグ戦3部 ブロック優勝、2部昇格。
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--フッター-->
+        <footer>
+            <div class="zone1">
+                ▶︎<a href="browser.html">対応ブラウザについて</a> <br>▶︎内部向け(パスワード要)<br>&emsp;<a href="http://www.ut-archery.jp/archer/members.cgi/index2.html">部員ページ</a> ｜ <a href="http://www.ut-archery.jp/ob/index.cgi">OB会入口</a>
+            </div>
+            <div class="zone2"><img src="img/logo_2.svg" width=100%></div>
+            <div class="zone3"><a href="#top">▲Page Top</a></div>
+            <div class="cpright">
+                ©️2020- The University of Tokyo Archery Team. All Rights Reserved.</div>
+        </footer>
+        <!--JavaScriptの読み込み、ハンバーガーメニューに利用-->
+        <script type="text/javascript" src="hamburger.js"></script>
+</body></html>
