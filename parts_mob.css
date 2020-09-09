@@ -18,6 +18,8 @@ a:active {
 }
 
 header {
+    grid-area: header;
+    z-index: 1;
     text-align: center;
     padding: auto;
     font-size: 24px;
@@ -50,20 +52,22 @@ ol.breadcrumb li:last-child::after {
 }
 
 main {
+    grid-area: main;
+    padding: 5px;
     background-color: #ffffff;
     padding: 5px 3px 0px 8px;
     margin: 0px 0px 0px 0px;
-    border-right-width: 0px;
-    border-right-style: solid;
-    border-right-color: none;
 }
 
 footer {
+    grid-area: footer;
     font-size: 12px;
     color: #2b8ba8;
-    background-color: #ffffff;
+    background-color: #f3f8f8;
+    border-top : 1px #336797 solid;
     border-bottom: 3px #336797 solid;
     /* フッタの下境界線 */
+    margin : 10px 0px 0px 0px;
     padding: 10px 5px 0px 0px;
     /* フッタのパディング（上下、左右） */
     clear: both;
@@ -71,21 +75,40 @@ footer {
     font-weight: 400;
 }
 
+.center{
+    text-align: center;
+    font-size:11px;
+}
+.center2{
+    text-align: center;
+    font-size:14px;
+    text-decoration:none;
+}
+
 p {
     margin: 8px 0px 8px 0px;
     font-size: 13px;
     padding-left: 5px;
-    font-family: "M plus 1p", "Helvetica", sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     font-weight: 300;
     color: #000000;
 }
 
-h0 {
+main li{
+    margin: 8px 0px 8px 0px;
+    font-size: 13px;
+    padding-left: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    color: #000000;
+}
+
+/*h0 {
     margin: 20px 0px 10px 0px;
     font-size: 20px;
     font-family: 'Manrope', sans-serif;
     color: #000000;
-}
+}*/
 
 h1 {
     margin: 5px 0px 8px 0px;
@@ -180,6 +203,8 @@ table.every thead th {
 /*https://techacademy.jp/magazine/19737*/
 
 lnav {
+    grid-area: lnav;
+    z-index: 1;
     height: 40px;
     text-align: center;
 }
@@ -245,6 +270,8 @@ lnav li subsub {
 
 /* 【グローバルナビゲーション】 */
 gnav {
+    grid-area: gnav;
+    z-index: 1;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
     background-color: rgb(255, 245, 225);
@@ -282,6 +309,12 @@ gnav a:hover {
     /* ヘッダメニューの下境界線 */
 }
 
+eyecatch {
+    grid-area: eyecatch;
+    overflow: hidden;
+    position:relative;
+}
+
 .photo_eyecatch {
     width: 100%;
     height: 150px;
@@ -290,30 +323,43 @@ gnav a:hover {
     z-index: -2;
 }
 
-eyecatch {
-    grid-area: eyecatch;
-    overflow: hidden;
-    position:relative;
-}
-
 .pagetitle {
-    height: 100px;
-    width:88%;
+    height: 130px;
+    width:calc(100% - 20px);
+    margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15px;
-    padding: auto;
-    border: 6px #1fb0cb solid;
-    color: #ffffff;
-    font-family: "M plus 1p",sans-serif;
-    font-weight: 500;
-    font-size : 40px;
     position : absolute;
     top:5px;
     left:5px;
+    font-family: "M plus 1p",sans-serif;
+    font-weight: 500;
+    font-size : 45px;
+    border: 5px #1fb0cb solid;
     z-index: -1;
 }
+
+eyecatch a:link {
+    color: #ffffff;
+    text-decoration:none;
+}
+
+eyecatch a:visited {
+    color: #ffffff;
+    text-decoration:none;
+}
+
+eyecatch :hover {
+    color: #307e00;
+    text-decoration:none;
+}
+
+eyecatch a:active {
+    color: #ffffff;
+    text-decoration:none;
+}
+
 /*以下、プロフィールの設定*/
 profile {
     float: center;
@@ -338,13 +384,6 @@ profile {
     width: 115px;
     height: 130px;
     object-fit: contain;
-}
-
-.photo {
-    grid-area: photo;
-    height: 100px;
-    object-fit: contain;
-    mix-blend-mode: multiply;
 }
 
 .job {
@@ -386,3 +425,36 @@ profile {
     font-size: 11px;
     padding: 0px 0px 0px 5px;
 }
+
+/*スマホ限定*/
+backtotop{
+    position:absolute;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    width:50px;
+    height: 50px;
+	border-radius: 50%;/*角丸*/
+    text-align: center;
+    background-color: rgba(134, 214, 25, 0.55);
+    border:1px rgba(134, 214, 25) solid;
+    color:#ffffff;
+    font-size:32px;
+    font-family: "M plus 1p",sans-serif;
+    font-weight: 500;
+}
+    backtotop a:link {
+        color: #ffffff;
+    }
+
+    backtotop a:visited {
+        color: #ffffff;
+    }
+
+    backtotop :hover {
+        color: #307e00;
+    }
+
+    backtotop a:active {
+        color: #ffffff;
+    }

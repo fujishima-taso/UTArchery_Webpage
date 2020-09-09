@@ -23,15 +23,14 @@ body {
     そのため、各行、各列の幅を指定してあげる。
     */
     min-height: 100vh;
-    grid-template-rows: 35px 35px 220px 300px 1fr 120px ;
-    grid-template-columns:200px minmax(500px,1fr);
+    grid-template-rows: 35px 35px 220px 1fr 120px ;
+    grid-template-columns:1fr;
     grid-template-areas:
-        "header     header"
-        "gnav         gnav"
-        "eyecatch eyecatch"
-        "lnav         main"
-        ".            main"
-        "footer     footer";
+        "header"
+        "gnav"
+        "eyecatch"
+        "main"
+        "footer";
 }
 
 /*MarginとPaddingは各パーツごとに指定することにしているが、
