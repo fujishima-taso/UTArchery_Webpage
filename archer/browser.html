@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--ページ情報(タブ部)-->
+    <title>対応ブラウザ</title>
+    <link rel="icon" type="image/png" href="img/icon.svg">
+    <!--スタイルシートの読み込み-->
+    <style type="text/css"></style>
+    <link rel="stylesheet" href="css/parts_mob.css" type="text/css" media="(max-width:700px)">
+    <link rel="stylesheet" href="css/layout2_mob.css" type="text/css" media="(max-width:700px)">
+    <link rel="stylesheet" href="css/parts.css" type="text/css" media="(min-width:701px)">
+    <link rel="stylesheet" href="css/layout2.css" type="text/css" media="(min-width:701px)">
+    <!--Webフォント読み込み-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP:wght@100;300;400;600&family=Roboto:wght@100;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <!--twitterカードの設定-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@akishin_archery">
+    <meta name="twitter:title" content="東京大学運動会洋弓部">
+    <meta name="twitter:description" content="東京大学運動会洋弓部の公式HPです。">
+    <meta name="twitter:image" content="img/card.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177519445-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-177519445-1');
+
+    </script>
+</head>
+<!--スマホでのみ、ページ上部に戻るボタンを出す/body外に置く-->
+<backtotop class="hide"><a href="#top">↑</a></backtotop>
+
+<body>
+    <!--ヘッダ-->
+    <header class="stick"><img src="img/logo.svg" height=20px></header>
+
+    <!--ページ間遷移メニュー-->
+    <gnav class="stick">
+        <ul>
+            <li><a href="top">ホーム</a></li>
+            <li><a href="about.html">活動案内</a></li>
+            <li><a href="profile.html">部員紹介</a></li>
+            <li class="active"><a href="result.html">試合結果</a></li>
+            <li><a href="record.html">歴代記録</a></li>
+            <li><a href="inquiry.html">お問い合わせ</a></li>
+        </ul>
+    </gnav>
+
+    <!--タイトル-->
+    <eyecatch>
+        <img src="img/browser.png" alt="" border="0" class="photo_eyecatch">
+        <div class="pagetitle">
+            <a href="top">対応ブラウザ</a>
+        </div>
+    </eyecatch>
+
+    <!--本体-->
+    <main>
+        <ol class="breadcrumb">
+            <li><a href="../index.html">ホーム</a></li>
+            <li>対応ブラウザ</li>
+        </ol>
+        <h1>対応ブラウザについて</h1>
+        <p>本ページのHTML/CSS記法は、一部のブラウザに非対応となっております。最新バージョンのブラウザでご覧いただくとともに、Microsoft EdgeやGoogle Chromeなどのブラウザでのご利用を推奨いたします。</p>
+        <p>なお、こちらに掲載されている検証済ブラウザにおいても、何らかの理由により表示が崩れるなどの状況も考えられます。あらかじめご了承ください。</p>
+        <h2>対応ブラウザ</h2>
+        <p>これらのブラウザは、問題なくご覧いただけるとされています。2020年時点での各ブラウザの最新版については全て検証済です。</p>
+        <li>Edge 16以降</li>
+        <li>Firefox 51以後</li>
+        <li>Google Chrome 57以降</li>
+        <li>Safari 11以降</li>
+        <li>IOS Safari 10.3以降</li>
+        <h2>表示が非対応のブラウザ</h2>
+        <p>これらのブラウザでは、表示が崩れてしまうことが判明しております。最新版ブラウザへのアップデートをお願いいたします。</p>
+        <li>Internet Explorer 10以前</li>
+        <li>Edge 15以前</li>
+        <li>Firefox 51以前</li>
+        <li>Google Chrome 56以前</li>
+        <li>Safari 10以前</li>
+        <li>IOS Safari 10.2以前</li>
+        <h2>ご利用を推奨しないブラウザ</h2>
+        <p>これらのブラウザは、表示を検証していない、もしくは環境により意図しない表示状態になる可能性があります。</p>
+        <li>Internet Explorer 11</li>
+        <li>その他、上記に掲載のないブラウザ</li>
+    </main>
+
+    <!--フッター-->
+    <footer>
+        <div class="center">
+            <a href="browser.html">対応ブラウザについて</a> ｜ <a href="http://www.ut-archery.jp/archer/members.cgi/index2.html">部員ページ</a> ｜ <a href="http://www.ut-archery.jp/ob/index.cgi">OB会入口</a>
+        </div>
+        <div class="center2"><img src="img/logo_2.svg" height=30px></div>
+        <div class="center2"><a href="#top">
+                ▲Page Top</a></div>
+        ©️ The University of Tokyo Archery Team. All Rights Reserved.
+    </footer>
+    <!--JavaScriptの読み込み、ハンバーガーメニューに利用-->
+    <script type="text/javascript" src="src/hamburger.js"></script>
+</body>
+
+</html>
