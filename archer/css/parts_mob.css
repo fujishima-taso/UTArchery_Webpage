@@ -1,21 +1,15 @@
 @charset "UTF-8";
 
-/* 【リンクの文字色】 */
-a:link {
-    color: #045867;
-}
 
-a:visited {
-    color: #045867;
-}
+/* 【main,footerのリンクの文字色】 */
+main a {color: #045867;}
+main a:hover {color: #b2bf0b;}
 
-a:hover {
-    color: #b2bf0b;
-}
+footer a {color: #045867;}
+footer a:hover {color: #b2bf0b;}
 
-a:active {
-    color: #008080;
-}
+lnav a {color: #045867;}
+lnav a:hover {color: #b2bf0b;}
 
 header {
     grid-area: header;
@@ -60,33 +54,51 @@ main {
 
 footer {
     grid-area: footer;
-    font-size: 12px;
-    color: #2b8ba8;
-    background-color: #f3f8f8;
-    border-top : 1px #336797 solid;
-    border-bottom: 3px #336797 solid;
-    /* フッタの下境界線 */
+    display : grid;
     margin : 10px 0px 0px 0px;
-    padding: 10px 5px 0px 0px;
-    /* フッタのパディング（上下、左右） */
-    clear: both;
-    font-family: "Mplus 1p", "Helvetica", sans-serif;
-    font-weight: 400;
+    padding : 5px 0px 0px 0px;
+    float: center;
+    /* 全体の文字色 */
+    font-weight: 500;
+    background-color: #f3f8f8;
+    grid-template-rows: 56px 20px;
+    grid-template-columns: 55% 45%;
+    grid-template-areas:
+        "zone1 zone2"
+        "cpright cpright";
+    font-size: 12px;
+    border-top : 1px #246579 solid;
 }
-
-.center{
-    text-align: center;
+.zone1{
+    padding : 0px 0px 0px 10px;  
+    grid-area: zone1;
+    text-align: left;
+    font-size:12px;
+    color: #045867;
+}
+.zone2{
+    grid-area: zone2;
+    display: flex;
+    justify-content: center;
     font-size:11px;
+    color: #045867;
 }
-.center2{
-    text-align: center;
-    font-size:14px;
-    text-decoration:none;
+/*スマホ版は上に戻るのボタンは不要*/
+.zone3{
+    display:none;
+}
+.cpright{
+    padding : 0px 0px 0px 10px;    
+    font-family: "Mplus 1p" sans-serif;
+    font-weight : 400;
+    color : #ffffff;
+    background-color: #246579;
+    grid-area: cpright;
 }
 
 p {
     margin: 8px 0px 8px 0px;
-    font-size: 13px;
+    font-size: 14px;
     padding-left: 5px;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 300;
@@ -94,7 +106,7 @@ p {
 }
 
 main li{
-    font-size: 13px;
+    font-size: 14px;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 300;
     color: #000000;
@@ -109,7 +121,7 @@ main li{
 
 h1 {
     margin: 5px 0px 8px 0px;
-    font-size: 22px;
+    font-size: 24px;
     font-family: "M plus 1p", "Helvetica", sans-serif;
     font-weight: 300;
     color: #01678d;
@@ -141,30 +153,54 @@ h3 {
 
 /*試合結果の表*/
 table {
-    /*	width: minmax(500px,100%);*/
     width: 100%;
     border-collapse: collapse;
 }
 
 th {
     width: 14%;
-    /*padding: 2px 5px;*/
     border: solid 1px #666666;
     color: #000000;
     background-color: #CFDCE3;
-    font-size: 13px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 td {
     width: 14%;
-    /*padding: 2px 5px;*/
+    padding: 2px 5px;
     border: solid 1px #666666;
     color: #000000;
     background-color: #ffffff;
     text-align: center;
     vertical-align: middle;
-    font-size: 13px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
 }
+
+/*th {
+    width: 14%;
+    border: solid 1px #666666;
+    color: #ffffff;
+    background-color: #2ec3db;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+td {
+    width: 14%;
+    border: solid 1px #666666;
+    color: #000000;
+    background-color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}*/
 
 thead {
     border-bottom: solid 0px #666666;
@@ -207,18 +243,15 @@ lnav {
 }
 
 lnav a {
-    display: block;
-    padding: 5px;
     text-decoration: none;
-    color: #000;
+    display: block;/*枠内全てで反応*/
 }
 
 label {
     display: block;
-    /*margin: 10px 20px 5px 20px;*/
     margin: 0px;
     padding: 8px 5px 5px 8px;
-    font-size: 13px;
+    font-size: 14px;
     color: #000000;
     background: #e0edb6;
     cursor: pointer;
@@ -237,11 +270,10 @@ lnav ul {
 }
 
 lnav li {
-    /*border-bottom: 1px #37add8 solid;*/
     height: 0;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    font-size: 15px;
+    color : #000000;
+    margin : 0px;
+    padding:0px;
     overflow: hidden;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -250,18 +282,29 @@ lnav li {
     transition: all 0.3s;
 }
 
-lnav li sub {
-    padding: 0px 0px 0px 0px;
-    font-size: 13px;
+lnav li.sub {
+    padding: 0px 0px 0px 8px;
+    font-size: 14px;
 }
 
-lnav li subsub {
-    padding: 0px 10px 0px 0px;
-    font-size: 11px;
+lnav li.subsub {
+    padding: 0px 0px 0px 15px;
+    font-size: 12px;
 }
 
 #menu_bar01:checked ~ #links01 li {
-    height: 30px;
+    border-bottom: 1px #aaaaaa dotted;
+    height : 30px;
+    opacity: 1;
+}
+#menu_bar01:checked ~ #links01 li {
+    border-bottom: 1px #aaaaaa dotted;
+    height : 25px;
+    opacity: 1;
+}
+#menu_bar01:checked ~ #links01 li {
+    border-bottom: 1px #aaaaaa dotted;
+    height : 23px;
     opacity: 1;
 }
 
@@ -297,13 +340,18 @@ gnav a {
     /* 文字色 */
     text-decoration: none;
     display: block;
-    /*border-bottom: 2px #2c5170 solid; /* ヘッダメニューの下境界線 */
 }
 
 gnav a:hover {
     color: #0cc3c3;
     border-bottom: 2px #f49f19 solid;
     /* ヘッダメニューの下境界線 */
+}
+
+gnav a.active{
+    border-bottom: 2px #ffa518 solid;
+    text-decoration: none;
+    display: block;
 }
 
 eyecatch {
@@ -361,14 +409,14 @@ eyecatch a:active {
 profile {
     float: center;
     display: grid;
-    margin: 0;
+    margin: 5px 0px 5px 0px;
     color: #000000;
     /* 全体の文字色 */
     font-family: 'Noto Sans JP', sans-serif;
     background-color: rgba(232, 244, 247, 0.92);
     /*min-height: 10vh;*/
     border: 1px #336797 solid;
-    grid-template-rows: 30px 30px 30px 40px;
+    grid-template-rows: 36px 27px 27px 40px;
     grid-template-columns: 115px 150px 1fr;
     grid-template-areas:
         "photo job      name   "
@@ -380,7 +428,8 @@ profile {
 .photo_profile {
     width: 115px;
     height: 130px;
-    object-fit: contain;
+    object-fit: cover;
+    /*coverは強制的に枠に当てはめて、containはタテヨコ比を維持する*/
 }
 
 .job {
@@ -396,7 +445,7 @@ profile {
     grid-area: name;
     font-weight: 100;
     font-size: 20px;
-    padding: 0px 0px 0px 5px;
+    padding: 5px 0px 0px 5px;
     font-weight: 300;
     border-bottom: 2px #336797 solid;
     color: rgb(15, 58, 96)
@@ -404,23 +453,159 @@ profile {
 
 .faculty {
     grid-area: faculty;
-    font-weight: 400;
-    font-size: 13px;
+    font-weight: 300;
+    font-size: 14px;
     padding: 0px 0px 0px 5px;
 }
 
 .school {
     grid-area: school;
-    font-weight: 400;
-    font-size: 13px;
+    font-weight: 300;
+    font-size: 14px;
     padding: 0px 0px 0px 5px;
+    border-bottom : 1px #336797 dotted;
 }
 
 .comment {
     grid-area: comment;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 12px;
     padding: 0px 0px 0px 5px;
+}
+
+inquiry {
+    float: center;
+    display: grid;
+    margin: 0px;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    /* 全体の文字色 */
+    background-color: #ffffff;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "midasi"
+        "detail";
+}
+
+/*midashiはh1,detailはpのスタイルを継承。*/
+.midasi {
+    grid-area: midasi;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: "M plus 1p", "Helvetica", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 0px 0px 0px 0px;
+    background-color: #16a7be;
+}
+
+.detail {
+    font-size: 14px;
+    padding-left: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    color: #000000;
+    padding: 5px 0px 0px 0px;
+    color: #000000;
+}
+.warning{
+    background-color: rgba(255, 208, 8, 0.51);
+    border : 2px #ff8800 solid;
+    border-radius: 10px;
+    padding : 5px;
+}
+
+/*Q and A*/
+question {
+    float: center;
+    display: grid;
+    margin: 5px 0px 3px 0px;
+    padding-top : 0px;
+    padding-bottom : 0px;
+    color: #000000;
+    /* 全体の文字色 */
+    background-color: #ffffff;
+    border: 2px #c60a68 solid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 70px calc(100% - 70px);
+    grid-template-areas:
+        "Q ques";
+}
+/*Qはh1,quesはpのスタイルを継承。*/
+.Q {
+    grid-area: Q;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    background-color : #d88eb3;
+    padding: 0px;
+}
+.ques{
+    grid-area: ques;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    color: #000000;
+}
+
+answer {
+    float: center;
+    display: grid;
+    margin: 3px 0px 5px 0px;
+    padding : 0px;
+    color: #000000;
+    /* 全体の文字色 */
+    background-color: #ffffff;
+    border: 2px #296dd9 solid;
+    grid-template-rows: 1fr;
+    grid-template-columns: calc(100% - 70px) 70px;
+    grid-template-areas:
+        "ans A";
+}
+/*Qはh1,quesはpのスタイルを継承。*/
+.A {
+    grid-area: A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    background-color : #8ebcd8;
+    padding: 0px;
+}
+.ans{
+    grid-area: ans;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    color: #000000;
+}
+
+.ichiran{
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    color: #000000;
+    border: 2px #c60a68 solid;
+	border-radius: 10px;/*角丸*/
+    padding: 8px;
+}
+.ihiran a{
+    font-weight: 400;
 }
 
 /*スマホ限定*/
