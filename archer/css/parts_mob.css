@@ -98,7 +98,7 @@ footer {
 
 p {
     margin: 8px 0px 8px 0px;
-    font-size: 13px;
+    font-size: 14px;
     padding-left: 5px;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 300;
@@ -106,7 +106,7 @@ p {
 }
 
 main li{
-    font-size: 13px;
+    font-size: 14px;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 300;
     color: #000000;
@@ -164,7 +164,7 @@ th {
     background-color: #CFDCE3;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 td {
@@ -177,7 +177,7 @@ td {
     vertical-align: middle;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 /*th {
@@ -187,7 +187,7 @@ td {
     background-color: #2ec3db;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 td {
@@ -199,7 +199,7 @@ td {
     vertical-align: middle;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 14px;
 }*/
 
 thead {
@@ -251,7 +251,7 @@ label {
     display: block;
     margin: 0px;
     padding: 8px 5px 5px 8px;
-    font-size: 13px;
+    font-size: 14px;
     color: #000000;
     background: #e0edb6;
     cursor: pointer;
@@ -284,7 +284,7 @@ lnav li {
 
 lnav li.sub {
     padding: 0px 0px 0px 8px;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 lnav li.subsub {
@@ -346,6 +346,12 @@ gnav a:hover {
     color: #0cc3c3;
     border-bottom: 2px #f49f19 solid;
     /* ヘッダメニューの下境界線 */
+}
+
+gnav a.active{
+    border-bottom: 2px #ffa518 solid;
+    text-decoration: none;
+    display: block;
 }
 
 eyecatch {
@@ -422,7 +428,8 @@ profile {
 .photo_profile {
     width: 115px;
     height: 130px;
-    object-fit: contain;
+    object-fit: cover;
+    /*coverは強制的に枠に当てはめて、containはタテヨコ比を維持する*/
 }
 
 .job {
@@ -447,14 +454,14 @@ profile {
 .faculty {
     grid-area: faculty;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 14px;
     padding: 0px 0px 0px 5px;
 }
 
 .school {
     grid-area: school;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 14px;
     padding: 0px 0px 0px 5px;
     border-bottom : 1px #336797 dotted;
 }
@@ -496,7 +503,7 @@ inquiry {
 }
 
 .detail {
-    font-size: 13px;
+    font-size: 14px;
     padding-left: 5px;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 300;
@@ -544,7 +551,7 @@ question {
     grid-area: ques;
     display: flex;
     align-items: center;
-    font-size: 13px;
+    font-size: 14px;
     padding: 5px;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 400;
@@ -582,7 +589,7 @@ answer {
     grid-area: ans;
     display: flex;
     align-items: center;
-    font-size: 13px;
+    font-size: 14px;
     padding: 5px;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 300;

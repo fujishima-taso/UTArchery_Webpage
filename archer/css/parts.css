@@ -462,8 +462,8 @@ profile {
 .photo_profile {
     width: 120px;
     height:145px;
-    object-fit: contain;
-    /*position: relative;*/
+    object-fit: cover;
+    /*coverは強制的に枠に当てはめて、containはタテヨコ比を維持する*/
 }
 
 .job {
@@ -530,8 +530,9 @@ inquiry {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align:center;
     font-size: 28px;
-    font-family: "M plus 1p", "Helvetica", sans-serif;
+    font-family: "M plus 1p", sans-serif;
     font-weight: 300;
     color: #01678d;
     padding: 0px 0px 0px 5px;
