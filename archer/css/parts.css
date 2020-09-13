@@ -14,17 +14,24 @@
 main a:link {color: #045867;}
 main a:visited {color: #045867;}
 main a:hover {color: #b2bf0b;}
-main a:active {color: #008080;}
+main a:active {color: #045867;}
 
 footer a:link {color: #045867;}
 footer a:visited {color: #045867;}
 footer a:hover {color: #b2bf0b;}
-footer a:active {color: #008080;}
+footer a:active {color: #045867;}
 
 lnav a:link {color: #045867;}
 lnav a:visited {color: #045867;}
 lnav a:hover {color: #b2bf0b;}
-lnav a:active {color: #008080;}
+lnav a:active {color: #045867;}
+
+/*これにより、ページ内リンクがメニューの下に来る*/
+a.anchor {
+    display: block;
+    padding-top: 50px;
+    margin-top: -50px;
+}
 
 header {
     grid-area: header;
@@ -40,6 +47,7 @@ header {
 /* 【グローバルナビゲーション】 */
 gnav {
     grid-area: gnav;
+    z-index: 1;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
     background-color: rgb(255, 245, 225);
@@ -51,6 +59,7 @@ gnav ul {
     padding: 5px 0px 5px 0px;
     margin: 0px 0px 0px 0px;
     list-style-type: none;
+    z-index: 1;
 }
 
 gnav li {
@@ -66,6 +75,12 @@ gnav li {
 gnav a {
     color: #0c4155;
     /* 文字色 */
+    text-decoration: none;
+    display: block;
+}
+
+gnav a.active{
+    border-bottom: 3px #ffa518 solid;
     text-decoration: none;
     display: block;
 }
@@ -93,6 +108,7 @@ eyecatch {
 .pagetitle {
     height: 190px;
     width:calc(100% - 30px);
+    color: #ffffff;
     margin : 0px;
     display: flex;
     justify-content: center;
@@ -319,19 +335,19 @@ table {
 }
 
 th {
-    width: 14%;
-    /*padding: 2px 5px;*/
+    /*width: 14%;*/
+    padding: 2px 5px;
     border: solid 1px #666666;
     color: #000000;
-    background-color: #CFDCE3;
+    background-color: #ddf1fc;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 600;
     font-size: 13px;
 }
 
 td {
-    width: 14%;
-    /*padding: 2px 5px;*/
+    /*width: 14%;*/
+    padding: 2px 5px;
     border: solid 1px #666666;
     color: #000000;
     background-color: #ffffff;
@@ -341,28 +357,13 @@ td {
     font-weight: 300;
     font-size: 13px;
 }
-
-/*th {
-    width: 14%;
-    border: solid 1px #666666;
-    color: #ffffff;
-    background-color: #2ec3db;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 600;
-    font-size: 13px;
+.left{
+    text-align: left;
 }
 
-td {
-    width: 14%;
-    border: solid 1px #666666;
-    color: #000000;
-    background-color: #ffffff;
-    text-align: center;
-    vertical-align: middle;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 300;
-    font-size: 13px;
-}*/
+.narrow{
+    width : 80px;
+}
 
 thead {
     border-bottom: solid 0px #666666;
@@ -393,50 +394,6 @@ th.2 {
 table.every thead th {
     padding: 0px 0px;
     font-size: 150%;
-}
-
-/* 【グローバルナビゲーション】 */
-gnav {
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
-    background-color: rgb(255, 245, 225);
-    border-bottom: 2px #336797 solid;
-    /* フッタの下境界線 */
-}
-
-gnav ul {
-    padding: 5px 0px 5px 0px;
-    margin: 0px 0px 0px 0px;
-    list-style-type: none;
-    z-index: 1;
-}
-
-gnav li {
-    display: inline-block;
-    /*position: relative; /* IE6用 */
-    font-size: 16px;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 400;
-    padding: 0px 7px 0px 7px;
-}
-
-gnav a {
-    color: #0c4155;
-    /* 文字色 */
-    text-decoration: none;
-    display: block;
-    /*border-bottom: 2px #2c5170 solid; /* ヘッダメニューの下境界線 */
-}
-gnav a.active{
-    border-bottom: 2px #ffa518 solid;
-    text-decoration: none;
-    display: block;
-}
-
-gnav a:hover {
-    color: #0cc3c3;
-    border-bottom: 2px #f49f19 solid;
-    /* ヘッダメニューの下境界線 */
 }
 
 /*プロフィールの設定*/
