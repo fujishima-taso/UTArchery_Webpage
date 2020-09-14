@@ -1,30 +1,17 @@
 @charset "UTF-8";
 
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 html{
     /*background: #ffffff;*/
-    display : -ms-grid;
     display : grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
 }
 
 /* 【全体の背景・テキストなど】 */
 body {
     max-width: 1000px;
     padding: auto;
-    display: -ms-grid;
     display: grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     margin: 0;
     color: #000000;
     background-color: #ffffff;
@@ -36,11 +23,9 @@ body {
     そのため、各行、各列の幅を指定してあげる。
     */
     min-height: 100vh;
-    -ms-grid-rows: 35px 35px 220px 300px 1fr 92px ;
     grid-template-rows: 35px 35px 220px 300px 1fr 92px ;
-    -ms-grid-columns:200px minmax(500px,1fr);
     grid-template-columns:200px minmax(500px,1fr);
-        grid-template-areas:
+    grid-template-areas:
         "header     header"
         "gnav         gnav"
         "eyecatch eyecatch"
@@ -53,13 +38,35 @@ body {
 特に指定のない場合下記のものが優先されると思う。*/
 
 .stick {
-    position: -webkit-sticky;
     position: sticky;
     top: 0px;
 }
 
 .stick_lnav {
-    position: -webkit-sticky;
     position: sticky;
     top: 40px;
+}
+
+header {
+    grid-area: header;
+}
+
+gnav {
+    grid-area: gnav;
+}
+
+eyecatch {
+    grid-area: eyecatch;
+}
+
+lnav {
+    grid-area: lnav;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
 }
