@@ -2,8 +2,18 @@
 /* 【レスポンシブデザイン_スマートフォンバージョン】 */
 
 /* 【全体の背景・テキストなど】 */
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+
 body {
     -webkit-text-size-adjust: 100%;
+    display: -ms-grid;
     display: grid;
     margin: 0;
     color: #000000;
@@ -15,9 +25,11 @@ body {
     そのため、各行、各列の幅を指定してあげる。
     */
     min-height: 100vh;
+    -ms-grid-rows: 35px 35px/*minmax(0.1fr,35px)*/ 150px 1fr 92px;
     grid-template-rows: 35px 35px/*minmax(0.1fr,35px)*/ 150px 1fr 92px;
+    -ms-grid-columns: 1fr 40px;
     grid-template-columns: 1fr 40px;
-    grid-template-areas:
+        grid-template-areas:
         "header     header"
         "gnav         gnav"
         "eyecatch eyecatch"
@@ -26,11 +38,13 @@ body {
 }
 
 .stick {
+    position: -webkit-sticky;
     position: sticky;
     top: 0px;
 }
 
 .stick_lnav {
+    position: -webkit-sticky;
     position: sticky;
     top: 35px;
 }

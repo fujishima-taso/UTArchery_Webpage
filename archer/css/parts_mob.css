@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
 
 /* 【main,footerのリンクの文字色】 */
 main a:link {color: #045867;}
@@ -39,6 +45,8 @@ header {
 /* 【パンくずリスト】 */
 ol {
     list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
@@ -67,6 +75,7 @@ main {
 
 footer {
     grid-area: footer;
+    display : -ms-grid;
     display : grid;
     margin : 10px 0px 0px 0px;
     padding : 5px 0px 0px 0px;
@@ -74,15 +83,19 @@ footer {
     /* 全体の文字色 */
     font-weight: 500;
     background-color: #f3f8f8;
+    -ms-grid-rows: 56px 20px;
     grid-template-rows: 56px 20px;
+    -ms-grid-columns: 55% 45%;
     grid-template-columns: 55% 45%;
-    grid-template-areas:
+        grid-template-areas:
         "zone1 zone2"
         "cpright cpright";
     font-size: 12px;
     border-top : 1px #246579 solid;
 }
 .zone1{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     padding : 0px 0px 0px 10px;  
     grid-area: zone1;
     text-align: left;
@@ -90,9 +103,15 @@ footer {
     color: #045867;
 }
 .zone2{
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: zone2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size:11px;
     color: #045867;
 }
@@ -101,6 +120,9 @@ footer {
     display:none;
 }
 .cpright{
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     padding : 0px 0px 0px 10px;    
     font-family: "Mplus 1p" sans-serif;
     font-weight : 400;
@@ -271,8 +293,6 @@ lnav li {
     padding:0px;
     overflow: hidden;
     -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
@@ -357,7 +377,8 @@ eyecatch {
 .photo_eyecatch {
     width: 100%;
     height: 150px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     position : relative;
     z-index: -2;
 }
@@ -367,9 +388,15 @@ eyecatch {
     width:calc(100% - 20px);
     color: #ffffff;
     margin: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position : absolute;
     top:5px;
     left:5px;
@@ -403,6 +430,7 @@ eyecatch a:active {
 /*以下、プロフィールの設定*/
 profile {
     float: center;
+    display: -ms-grid;
     display: grid;
     margin: 5px 0px 5px 0px;
     color: #000000;
@@ -411,9 +439,11 @@ profile {
     background-color: rgba(232, 244, 247, 0.92);
     /*min-height: 10vh;*/
     border: 1px #336797 solid;
+    -ms-grid-rows: 36px 27px 27px 40px;
     grid-template-rows: 36px 27px 27px 40px;
+    -ms-grid-columns: 115px 150px 1fr;
     grid-template-columns: 115px 150px 1fr;
-    grid-template-areas:
+        grid-template-areas:
         "photo job      name   "
         "photo faculty  faculty"
         "photo school   school "
@@ -423,11 +453,14 @@ profile {
 .photo_profile {
     width: 115px;
     height: 130px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     /*coverは強制的に枠に当てはめて、containはタテヨコ比を維持する*/
 }
 
 .job {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: job;
     padding: 10px 0px 0px 5px;
     font-weight: 300;
@@ -437,6 +470,8 @@ profile {
 }
 
 .name {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
     grid-area: name;
     font-weight: 100;
     font-size: 20px;
@@ -447,6 +482,9 @@ profile {
 }
 
 .faculty {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
     grid-area: faculty;
     font-weight: 300;
     font-size: 14px;
@@ -454,6 +492,9 @@ profile {
 }
 
 .school {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
     grid-area: school;
     font-weight: 300;
     font-size: 14px;
@@ -462,6 +503,9 @@ profile {
 }
 
 .comment {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
     grid-area: comment;
     font-weight: 400;
     font-size: 12px;
@@ -470,25 +514,36 @@ profile {
 
 inquiry {
     float: center;
+    display: -ms-grid;
     display: grid;
     margin: 0px;
     padding-top : 10px;
     padding-bottom : 10px;
     /* 全体の文字色 */
     background-color: #ffffff;
+    -ms-grid-rows: 50px 1fr;
     grid-template-rows: 50px 1fr;
+    -ms-grid-columns: 100%;
     grid-template-columns: 100%;
-    grid-template-areas:
+        grid-template-areas:
         "midasi"
         "detail";
 }
 
 /*midashiはh1,detailはpのスタイルを継承。*/
 .midasi {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: midasi;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 24px;
     font-family: "M plus 1p", "Helvetica", sans-serif;
     font-weight: 300;
@@ -516,6 +571,7 @@ inquiry {
 /*Q and A*/
 question {
     float: center;
+    display: -ms-grid;
     display: grid;
     margin: 5px 0px 3px 0px;
     padding-top : 0px;
@@ -524,17 +580,27 @@ question {
     /* 全体の文字色 */
     background-color: #ffffff;
     border: 2px #c60a68 solid;
+    -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
+    -ms-grid-columns: 70px calc(100% - 70px);
     grid-template-columns: 70px calc(100% - 70px);
-    grid-template-areas:
+        grid-template-areas:
         "Q ques";
 }
 /*Qはh1,quesはpのスタイルを継承。*/
 .Q {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: Q;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 21px;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 600;
@@ -543,9 +609,15 @@ question {
     padding: 0px;
 }
 .ques{
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: ques;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 14px;
     padding: 5px;
     font-family: "Noto Sans JP", sans-serif;
@@ -555,6 +627,7 @@ question {
 
 answer {
     float: center;
+    display: -ms-grid;
     display: grid;
     margin: 3px 0px 5px 0px;
     padding : 0px;
@@ -562,17 +635,27 @@ answer {
     /* 全体の文字色 */
     background-color: #ffffff;
     border: 2px #296dd9 solid;
+    -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
+    -ms-grid-columns: calc(100% - 70px) 70px;
     grid-template-columns: calc(100% - 70px) 70px;
-    grid-template-areas:
+        grid-template-areas:
         "ans A";
 }
 /*Qはh1,quesはpのスタイルを継承。*/
 .A {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: A;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 21px;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 600;
@@ -581,9 +664,15 @@ answer {
     padding: 0px;
 }
 .ans{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: ans;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 14px;
     padding: 5px;
     font-family: "Noto Sans JP", sans-serif;
