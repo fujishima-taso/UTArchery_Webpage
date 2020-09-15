@@ -1,9 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @charset "UTF-8";
 /* 【レスポンシブデザイン_スマートフォンバージョン】 */
 
 /* 【全体の背景・テキストなど】 */
 body {
     -webkit-text-size-adjust: 100%;
+    display: -ms-grid;
     display: grid;
     margin: 0;
     color: #000000;
@@ -15,9 +23,11 @@ body {
     そのため、各行、各列の幅を指定してあげる。
     */
     min-height: 100vh;
+    -ms-grid-rows: auto auto auto auto auto auto;
     grid-template-rows: 35px 35px/*minmax(0.1fr,35px)*/ 150px 35px 1fr 92px;
+    -ms-grid-columns: 100%;
     grid-template-columns: 1fr 40px;
-    grid-template-areas:
+        grid-template-areas:
         "header     header"
         "gnav         gnav"
         "eyecatch eyecatch"
@@ -27,35 +37,49 @@ body {
 }
 
 .stick {
+    position: -webkit-sticky;
     position: sticky;
     top: 0px;
 }
 
 .stick_lnav {
+    position: -webkit-sticky;
     position: sticky;
     top: 35px;
 }
 
 header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: header;
 }
 
 gnav {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
     grid-area: gnav;
 }
 
 eyecatch {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
     grid-area: eyecatch;
 }
 
 lnav {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
     grid-area: lnav;
 }
 
 main {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
     grid-area: main;
 }
 
 footer {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
     grid-area: footer;
 }
