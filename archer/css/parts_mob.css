@@ -33,8 +33,7 @@ a.anchor {
 
 header {
     height : 35px;  
-    grid-area: header;
-    position : relative;/*fucking IE*/
+    position : relative;/*for IE*/
     z-index: 1;
     text-align: center;
     padding: auto;
@@ -69,7 +68,6 @@ ol.breadcrumb li:last-child::after {
 }
 
 main {
-    grid-area: main;
     padding: 5px;
     background-color: #ffffff;
     padding: 5px 3px 0px 8px;
@@ -77,7 +75,6 @@ main {
 }
 
 footer {
-    grid-area: footer;
     display : -ms-grid;
     display : grid;
     margin : 10px 0px 0px 0px;
@@ -256,7 +253,6 @@ table.every thead th {
 /*https://techacademy.jp/magazine/19737*/
 
 lnav {
-    grid-area: lnav;
     z-index: 1;
     height: 40px;
     text-align: center;
@@ -329,7 +325,6 @@ lnav li.subsub {
 /* 【グローバルナビゲーション】 */
 gnav {
     height : 70px;
-    grid-area: gnav;
     position : relative;
     z-index: 2;/*上二つはIE用に試しに足してみている*/
     padding: 0px 0px 0px 0px;
@@ -374,7 +369,6 @@ gnav a.active{
 }
 
 eyecatch {
-    grid-area: eyecatch;
     overflow: hidden;
     position:relative;
 }

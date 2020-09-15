@@ -104,6 +104,7 @@ gnav a:hover {
 eyecatch {
     overflow: hidden;
     position:relative;
+/*    background-color:#01678d;*/
 }
 
 .photo_eyecatch {
@@ -111,7 +112,10 @@ eyecatch {
     height: 220px;
     -o-object-fit: cover;
        object-fit: cover;
-    position : relative;
+/*    position : relative;*/
+    position : absolute;
+    top:0px;
+    left:0px;    
     z-index: -2;
 }
 
