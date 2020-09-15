@@ -34,7 +34,6 @@ a.anchor {
 }
 
 header {
-    grid-area: header;
     text-align: center;
     padding: auto;
     margin: 0px 0px 0px 0px;
@@ -46,7 +45,6 @@ header {
 
 /* 【グローバルナビゲーション】 */
 gnav {
-    grid-area: gnav;
     z-index: 1;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
@@ -92,7 +90,6 @@ gnav a:hover {
 }
 
 eyecatch {
-    grid-area: eyecatch;
     overflow: hidden;
     position:relative;
 }
@@ -227,14 +224,12 @@ ol.breadcrumb li:last-child::after {
 }
 
 main {
-    grid-area: main;
     background-color: #ffffff;
     padding: 5px 3px 0px 8px;
     margin: 0px 0px 0px 0px;
 }
 
 footer {
-    grid-area: footer;
     display : grid;
     margin : 10px 0px 0px 0px;
     padding : 5px 0px 0px 0px;

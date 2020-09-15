@@ -35,3 +35,27 @@ body {
     position: sticky;
     top: 35px;
 }
+
+header {
+    grid-area: header;
+}
+
+gnav {
+    grid-area: gnav;
+}
+
+eyecatch {
+    grid-area: eyecatch;
+}
+
+lnav {
+    grid-area: lnav;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
