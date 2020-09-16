@@ -79,7 +79,6 @@ gnav li {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 400;
     padding: 0px 7px 0px 7px;
-
 }
 
 gnav a {
@@ -102,6 +101,7 @@ gnav a:hover {
 }
 
 eyecatch {
+    height : 220px;
     overflow: hidden;
     position:relative;
 /*    background-color:#01678d;*/
@@ -112,10 +112,10 @@ eyecatch {
     height: 220px;
     -o-object-fit: cover;
        object-fit: cover;
-/*    position : relative;*/
-    position : absolute;
+    position : relative;
+/*    position : absolute;
     top:0px;
-    left:0px;    
+    left:0px;    */
     z-index: -2;
 }
 
