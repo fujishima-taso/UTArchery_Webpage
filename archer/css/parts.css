@@ -180,7 +180,7 @@ lnav ul {
 高さはemで指定(文字サイズを基準にする)
 */
 lnav li {
-    font-size: 20px;
+    font-size: 18px;
     font-family: "M plus 1p", "Helvetica", sans-serif;
     font-weight: 300;
     line-height: 2.2em;
@@ -699,4 +699,65 @@ answer {
 }
 .ihiran a{
     font-weight: 400;
+}
+
+annual {
+    float: center;
+    display: -ms-grid;
+    display: grid;
+    margin: 0px;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    color: #000000;
+    /* 全体の文字色 */
+    background-color: #ffffff;
+    border-bottom: 1px #336797 dotted;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: auto;
+    -ms-grid-columns: 180px calc(100% - 180px);
+    grid-template-columns: 180px calc(100% - 180px);
+        grid-template-areas:
+        "annual_image annual_detail";
+}
+
+/*midashiはh1,detailはpのスタイルを継承。*/
+.annual_image {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: annual_image;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align:center;
+    font-size: 28px;
+    font-family: "M plus 1p", sans-serif;
+    font-weight: 300;
+    color: #01678d;
+    padding: 0px 0px 0px 5px;
+}
+
+.annual_detail {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: annual_detail;
+    font-size: 14px;
+    padding-left: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    color: #000000;
+    padding: 0px 0px 0px 5px;
+}
+
+.warning{
+    background-color: rgba(255, 208, 8, 0.51);
+    border : 2px #ff8800 solid;
+    border-radius: 10px;
+    padding : 5px;
+    
 }
