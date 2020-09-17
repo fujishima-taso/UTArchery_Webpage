@@ -8,6 +8,11 @@
 @charset "UTF-8";
 /* 【レスポンシブデザイン_スマートフォンバージョン】 */
 
+html{
+    scroll-behavior: smooth;/*ページ内遷移を滑らかにする。*/
+}
+
+
 /* 【全体の背景・テキストなど】 */
 body {
     -webkit-text-size-adjust: 100%;

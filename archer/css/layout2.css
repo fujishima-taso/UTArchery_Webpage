@@ -7,13 +7,15 @@
 
 @charset "UTF-8";
 
-html{
+html {
+    scroll-behavior: smooth;
+    /*ページ内遷移を滑らかにする。*/
     /*background: #ffffff;*/
-    display : -ms-grid;
-    display : grid;
+    display: -ms-grid;
+    display: grid;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 /* 【全体の背景・テキストなど】 */
@@ -23,8 +25,8 @@ body {
     display: -ms-grid;
     display: grid;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin: 0;
     color: #000000;
     background-color: #ffffff;
@@ -36,11 +38,11 @@ body {
     そのため、各行、各列の幅を指定してあげる。
     */
     min-height: 100vh;
-    -ms-grid-rows: 35px 35px 220px 1000px 92px ;
-    grid-template-rows: 35px 35px 220px 1fr 92px ;
-    -ms-grid-columns:1000px;
-    grid-template-columns:1fr;
-        grid-template-areas:
+    -ms-grid-rows: 35px 35px 220px 1000px 92px;
+    grid-template-rows: 35px 35px 220px 1fr 92px;
+    -ms-grid-columns: 1000px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
         "header"
         "gnav"
         "eyecatch"
@@ -52,13 +54,13 @@ body {
 特に指定のない場合下記のものが優先されると思う。*/
 
 .stick {
-/*    position: -webkit-sticky;*/
+    /*    position: -webkit-sticky;*/
     position: sticky;
     top: 0px;
 }
 
 .stick_lnav {
-   /* position: -webkit-sticky;*/
+    /* position: -webkit-sticky;*/
     position: sticky;
     top: 40px;
 }

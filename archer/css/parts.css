@@ -167,7 +167,7 @@ eyecatch a:active {
 lnav {
     background-color: #ffffff;
     grid-area: lnav;
-    margin: 0px 2px 0px 5px;
+    margin: 0px 2px 0px 2px;
     width: 177px;
 }
 
@@ -206,7 +206,7 @@ lnav li.sub {
 
 lnav li.subsub {
     font-weight: 400;
-    margin-left: 10px;
+    margin-left: 12px;
     font-size: 12px;
     line-height: 1.6em;
     margin-bottom: 4px;
@@ -334,7 +334,7 @@ p {
 h1 {
     margin: 10px 0px 10px 0px;
     font-size: 28px;
-    font-family: "M plus 1p", "Helvetica", sans-serif;
+    font-family: "M plus 1p", sans-serif;
     font-weight: 300;
     color: #01678d;
     /*    border-bottom: 1px #01678d solid;*/
@@ -343,7 +343,7 @@ h1 {
 h2 {
     margin: 20px 0px 5px 0px;
     font-size: 20px;
-    font-family: "M+ 1c regular", "Helvetica", sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     font-weight: 400;
     border-bottom-width: 2px;
     border-bottom-style: solid;
@@ -354,8 +354,8 @@ h2 {
 h3 {
     margin: 20px 0px 5px 0px;
     padding: 0px 0px 0px 5px;
-    font-size: 20px;
-    font-family: "M+ 1c regular", "Helvetica", sans-serif;
+    font-size: 18px;
+    font-family: "Noto Sans JP", sans-serif;
     font-weight: 400;
     border-left-width: 5px;
     border-left-style: solid;
