@@ -280,7 +280,7 @@ input {
 lnav ul {
     margin: 0px 20px 0px 20px;
     padding: 0;
-    background: rgba(235, 235, 235, 0.9);
+    background: rgba(255, 255, 255, 0.94);
     list-style: none;
     text-align: left;
 }
@@ -311,12 +311,12 @@ lnav li.subsub {
     height : 30px;
     opacity: 1;
 }
-#menu_bar01:checked ~ #links01 li {
+#menu_bar01:checked ~ #links01 li.sub {
     border-bottom: 1px #aaaaaa dotted;
     height : 25px;
     opacity: 1;
 }
-#menu_bar01:checked ~ #links01 li {
+#menu_bar01:checked ~ #links01 li.subsub {
     border-bottom: 1px #aaaaaa dotted;
     height : 23px;
     opacity: 1;
@@ -358,7 +358,7 @@ gnav a {
 
 gnav a:hover {
     color: #0cc3c3;
-    border-bottom: 2px #f49f19 solid;
+    border-bottom: 3px #f49f19 solid;
     /* ヘッダメニューの下境界線 */
 }
 
@@ -693,6 +693,99 @@ answer {
 }
 .ihiran a{
     font-weight: 400;
+}
+
+/*新歓トップページ用*/
+thumbnail{
+    float: center;
+    display: inline-block;
+    margin: 8px;
+    width : 95%;
+    padding : 5px;
+    border : 1px #05727b solid;
+    border-radius: 5px;
+    background-color: #f9ffff;
+    /* 全体の文字色 */
+}
+thumbnail:hover{
+    border : 1px #f873e9 solid;
+    background-color: #f7ddf4;
+    text-decoration:  #0a96a2 underline;
+}
+thumbnail,
+thumbnail::before,
+thumbnail::after {
+    transition: all .3s;    
+}
+
+.thu_title{
+    display: flex;
+    font-size: 20px;
+    font-family: "M plus 1p", sans-serif;
+    font-weight: 500;
+    color: #05727b;
+    padding: 0px 0px 0px 0px;
+}
+.thu_detail{
+    font-size: 13px;
+    padding-left: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    color: #777777;
+    padding: 5px 0px 0px 0px;
+}
+
+annual {
+    float: center;
+    display: -ms-grid;
+    display: grid;
+    margin: 0px;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    color: #000000;
+    /* 全体の文字色 */
+    background-color: #ffffff;
+    border-bottom: 1px #336797 dotted;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: auto;
+    -ms-grid-columns: 180px calc(100% - 180px);
+    grid-template-columns: 180px calc(100% - 180px);
+        grid-template-areas:
+        "annual_image annual_detail";
+}
+
+/*midashiはh1,detailはpのスタイルを継承。*/
+.annual_image {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: annual_image;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align:center;
+    font-size: 28px;
+    font-family: "M plus 1p", sans-serif;
+    font-weight: 300;
+    color: #01678d;
+    padding: 0px 0px 0px 5px;
+}
+
+.annual_detail {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: annual_detail;
+    font-size: 14px;
+    padding-left: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    color: #000000;
+    padding: 0px 0px 0px 5px;
 }
 
 /*スマホ限定*/

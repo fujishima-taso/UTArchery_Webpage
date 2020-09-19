@@ -96,7 +96,7 @@ gnav a.active{
 
 gnav a:hover {
     color: #0cc3c3;
-    border-bottom: 2px #f49f19 solid;
+    border-bottom: 3px #f49f19 solid;
     /* ヘッダメニューの下境界線 */
 }
 
@@ -700,6 +700,45 @@ answer {
 .ihiran a{
     font-weight: 400;
 }
+/*新歓ページ用*/
+thumbnail{
+    float: center;
+    display: inline-block;
+    margin: 8px;
+    width : calc(50% - 30px);
+    padding : 5px;
+    border : 1px #05727b solid;
+    border-radius: 5px;
+    background-color: #f9ffff;
+    /* 全体の文字色 */
+}
+thumbnail:hover{
+    border : 1px #f873e9 solid;
+    background-color: #f7ddf4;
+    text-decoration:  #0a96a2 underline;
+}
+thumbnail,
+thumbnail::before,
+thumbnail::after {
+    transition: all .3s;    
+}
+
+.thu_title{
+    display: flex;
+    font-size: 22px;
+    font-family: "M plus 1p", sans-serif;
+    font-weight: 500;
+    color: #05727b;
+    padding: 0px 0px 0px 0px;
+}
+.thu_detail{
+    font-size: 14px;
+    padding-left: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    color: #777777;
+    padding: 5px 0px 0px 0px;
+}
 
 annual {
     float: center;
@@ -760,4 +799,27 @@ annual {
     border-radius: 10px;
     padding : 5px;
     
+}
+
+/*for index.html*/
+topcontents{
+    display :grid;
+    display : -ms-grid;
+    margin : 0px;
+    padding : 0px;
+    width:100%;
+    float: center;
+    /* 全体の文字色 */
+    font-weight: 500;
+    background-color: #f3f8f8;
+    -ms-grid-rows: 56px 20px;
+    grid-template-rows: 56px 20px;
+    -ms-grid-columns: 35% 30% 35%;
+    grid-template-columns: 35% 30% 35%;
+        grid-template-areas:
+        "zone1 zone2 zone3"
+        "cpright cpright cpright";
+    font-size: 12px;
+    border-top : 1px #246579 solid;
+
 }

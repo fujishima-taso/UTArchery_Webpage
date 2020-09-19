@@ -28,7 +28,7 @@ body {
     */
     min-height: 100vh;
     -ms-grid-rows: auto auto auto auto auto;
-    grid-template-rows: 35px 35px/*minmax(0.1fr,35px)*/ 150px 1fr 92px;
+    grid-template-rows: 35px 60px/*minmax(0.1fr,70px)*/ 150px 1fr 92px;
     -ms-grid-columns: 1fr 40px;
     grid-template-columns: 1fr 40px;
         grid-template-areas:
@@ -48,7 +48,7 @@ body {
 .stick_lnav {
     position: -webkit-sticky;
     position: sticky;
-    top: 35px;
+    top: 60px;
 }
 
 header {
