@@ -1,0 +1,247 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+@charset "UTF-8";
+/* 【レスポンシブデザイン_スマートフォンバージョン】 */
+
+/* 【全体の背景・テキストなど】 */
+body {
+    -webkit-text-size-adjust: 100%;
+    display: -ms-grid;
+    display: grid;
+    margin: 0;
+    /* 全体の文字色 */
+    font-family: 'Noto Sans JP', sans-serif;
+    /*以下がGridの指定。*/
+    /*
+    今回はtemplate-areasに指定してあるような構成なので、四行二列。
+    そのため、各行、各列の幅を指定してあげる。
+    */
+    min-height: 100vh;
+    -ms-grid-rows: auto auto auto;
+    grid-template-rows:60px 1fr 92px;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 1fr 40px;
+        grid-template-areas:
+        "gnav         gnav"
+        "main         main"
+        "footer     footer";
+}
+
+main {
+    grid-area: main;
+    background-color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+}
+
+topcontents{
+    margin : 0px;
+    padding : 0px;
+    width:100%;
+    float: center;
+
+}
+.img1{
+    width : 100%;
+    margin : 0px;
+    padding : 0px;
+}
+.img2{
+    display:none;/*スマホ版では割愛*/
+}
+.img3{
+    width : 100%;
+    margin : 0px;
+    padding : 0px;
+    overflow:hidden;
+}
+.img3:hover img{
+  transform: scale(1.02);
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+.img4{
+    width : 100%;
+    grid-area: img4;
+    margin : 0px;
+    padding : 0px;
+    overflow:hidden;
+}
+.img4:hover img{
+    transform: scale(1.02);
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+news{
+    width : 100%;
+    height : 450px;
+    overflow:hidden;
+    float : left;
+    margin : 8px;
+    padding : 8px;
+    border-bottom : 1px #000000 solid;
+}
+
+/*この要素はnewsとdownload内に存在するのでそれに合わせて幅指定。*/
+topictitle{
+    width : 100%;
+    float : left;
+    font-size: 20px;
+    font-family: "M plus 1p", sans-serif;
+    font-weight: 400;
+    color: #01678d;
+    border-bottom : 1px #000000 solid;
+}
+.topic{
+    display :grid;
+    margin : 0px;
+    padding : 3px 0px;
+    width:100%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 60px calc(100% - 60px);
+    grid-template-areas:"date detail";
+    border-bottom : 1px #666666 dotted;
+}
+
+.date{
+    display: flex;
+    align-items: center;
+    grid-area: date;
+    font-family : "M plus 1p",sans-serif;
+    font-weight: 500;
+    font-size : 16px;
+    border-right : 2px #088cbe solid;
+    text-align : center;
+    color : #666666;
+}
+
+.detail{
+    margin-left: 3px;
+/*    display:contents;
+    align-items: center;*/
+    /*やりたいんだけどリンクの位置がバグる*/
+    grid-area: detail;
+    font-family : "Noto Sans JP",sans-serif;
+    font-weight: 400;
+    font-size : 14px;
+    text-align:left;
+}
+
+download{
+    width : 100%;
+    height : 450px;
+    overflow:hidden;
+    float : left;
+    margin : 8px;
+    padding : 8px;
+    border-bottom : 1px #000000 solid;
+    font-family : "Noto Sans JP",sans-serif;
+    font-weight: 300;
+    font-size : 14px;
+}
+
+/*contents*/
+.conte{
+    display :grid;
+    margin : 0px;
+    padding : 6px 0px;
+    width:100%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 40% 60%;
+    grid-template-areas:"obje capt";
+    border-bottom : 1px #666666 dotted;
+}
+/*object*/
+.obje{
+    display: flex;
+    align-items: center;
+    grid-area: obje;
+    font-family : "Noto Sans JP",sans-serif;
+    font-weight: 400;
+    font-size : 16px;
+    border-right : 2px #088cbe solid;
+    color : #666666;
+    text-align : left;
+}
+
+/*caption*/
+.capt{ 
+    margin-left: 3px;
+    padding-left : 3px;
+    display: flex;
+    align-items: center;
+    grid-area: capt;
+    font-family : "Noto Sans JP",sans-serif;
+    font-weight: 400;
+    font-size : 14px;
+    text-align:left;
+}
+
+.imgtwitter{
+    width : 300px;
+    text-align: center;
+    margin : 0px;
+    padding : 0px;
+    margin : 8px 16px 8px 8px;
+}
+.imgtwitter:hover img{
+  transform: scale(1.02);
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+
+
+/*gnav実験*/
+gnav {
+    height : 60px;
+    position : relative;
+    z-index: 2;/*上二つはIE用に試しに足してみている*/
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    background-image:url("../img/header.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+/*    background-color: #333333;*/
+    border-bottom: 2px #beb607 solid;
+    /* フッタの下境界線 */
+}
+
+gnav ul {
+    padding: 5px 0px 5px 0px;
+    margin: 0px 0px 0px 0px;
+    list-style-type: none;
+    z-index: 1;
+}
+
+gnav li {
+    display: inline-block;
+    /*position: relative; /* IE6用 */
+    font-size: 16px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    padding: 0px 7px 0px 7px;
+}
+
+gnav a {
+    color: #ffffff;
+    /* 文字色 */
+    text-decoration: none;
+    display: block;
+}
+
+gnav a.active{
+    border-bottom: 3px #ffa518 solid;
+    text-decoration: none;
+    display: block;
+}
+
+gnav a:hover {
+    color: #0cc3c3;
+    border-bottom: 3px #f49f19 solid;
+    /* ヘッダメニューの下境界線 */
+}

@@ -47,7 +47,9 @@ header {
     text-align: center;
     padding: auto;
     margin: 0px 0px 0px 0px;
-    background-color: #bfe3ea;
+    background-image:url("../img/header.png");
+    background-repeat: no-repeat;
+    background-size:cover;
     float: center;
     font-size: 25px;
     font-family: 'M plus 1p', sans-serif;
@@ -60,8 +62,8 @@ gnav {
     z-index: 2;/*上二つはIE用に試しに足してみている*/
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
-    background-color: rgb(255, 245, 225);
-    border-bottom: 2px #336797 solid;
+    background-color: #333333;
+    border-bottom: 2px #8dbe07 solid;
     /* フッタの下境界線 */
 }
 
@@ -82,7 +84,7 @@ gnav li {
 }
 
 gnav a {
-    color: #0c4155;
+    color: #ffffff;
     /* 文字色 */
     text-decoration: none;
     display: block;
@@ -799,27 +801,4 @@ annual {
     border-radius: 10px;
     padding : 5px;
     
-}
-
-/*for index.html*/
-topcontents{
-    display :grid;
-    display : -ms-grid;
-    margin : 0px;
-    padding : 0px;
-    width:100%;
-    float: center;
-    /* 全体の文字色 */
-    font-weight: 500;
-    background-color: #f3f8f8;
-    -ms-grid-rows: 56px 20px;
-    grid-template-rows: 56px 20px;
-    -ms-grid-columns: 35% 30% 35%;
-    grid-template-columns: 35% 30% 35%;
-        grid-template-areas:
-        "zone1 zone2 zone3"
-        "cpright cpright cpright";
-    font-size: 12px;
-    border-top : 1px #246579 solid;
-
 }

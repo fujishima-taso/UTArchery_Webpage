@@ -1,140 +1,240 @@
 @charset "UTF-8";
 
-/* 【全体の背景・テキストなど】 */
-body{
-    max-width: 900px;
-    padding : auto;
-    display: grid;
-    margin: 0;
-    color: #000000; /* 全体の文字色 */
-    font-family: 'Noto Sans JP', sans-serif;
-    /*以下がGridの指定。*/
-    /*
-    今回はtemplate-areasに指定してあるような構成なので、四行二列。
-    そのため、各行、各列の幅を指定してあげる。
-    */
+/*parts.cssとlayout2.cssを継承し、差分のみ記述*/
+
+body {
     min-height: 100vh;
-    grid-template-rows: 35px 35px 300px 1fr 35px;
-    grid-template-columns :minmax(0.3fr,200px) minmax(1fr,800px);
+    -ms-grid-rows: 35px 1000px 92px;
+    grid-template-rows: 35px 1fr 92px;
+    -ms-grid-columns: 1000px;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "title   title" 
-        "gnav     gnav"
-        "lnav     main"
-        ".        main"
-        "footer footer";
-}
-/*MarginとPaddingは各パーツごとに指定することにしているが、
-特に指定のない場合下記のものが優先されると思う。*/
-
-.stick {
-  position: sticky;
-  top: 0px;
-}
-.stick_lnav {
-  position: sticky;
-  top: 40px;
+        "gnav"
+        "main"
+        "footer";
 }
 
+main {
+    grid-area: main;
+    background-color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+}
 
-/*square{
-    padding : 0px 0px 0px 0px;
-    margin : 0px 0px 0px 0px;
-    background-color : rgb(255, 157, 0) ;
-    color : rgb(255, 157, 0) ;
+topcontents{
+    display :grid;
+    margin : 0px;
+    padding : 0px;
     width:100%;
-    height 100%;
-    z-index: -1;
-    position : absolute ;
-    padding:  0px;             /* 余白指定 */
-    /*left:  0px;                /* 左からの位置指定 */
-    /*top: 30px;                  /* 上からの位置指定 */
-    /*float : center;
-}*/
-header{
-    grid-area : title;
+    float: center;
+    grid-template-rows: 18.8% 32.6% 46%;
+    grid-template-columns: 60% 40%;
+        grid-template-areas:
+        "img1 img2"
+        "img1 img3"
+        "img4 img4";
+}
+.img1{
+    width : 100%;
+    grid-area: img1;
+    margin : 0px;
+    padding : 0px;
+}
+.img2{
+    width : 100%;
+    grid-area: img2;
+    margin : 0px;
+    padding : 0px;
+}
+.img3{
+    width : 100%;
+    grid-area: img3;
+    margin : 0px;
+    padding : 0px;
+    overflow:hidden;
+}
+.img3:hover img{
+  transform: scale(1.02);
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+.img4{
+    width : 100%;
+    grid-area: img4;
+    margin : 0px;
+    padding : 0px;
+    overflow:hidden;
+}
+.img4:hover img{
+    transform: scale(1.02);
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+news{
+    width : 45%;
+    height : 450px;
+    overflow:scroll;
+    float : left;
+    margin-left : 8px;
+    padding : 8px;
+    border-bottom : 1px #000000 solid;
 }
 
-/* 【グローバルナビゲーション】 */
-gnav{
-    grid-area : gnav;
+/*この要素はnewsとdownload内に存在するのでそれに合わせて幅指定。*/
+topictitle{
+    width : 100%;
+    float : left;
+    font-size: 24px;
+    font-family: "M plus 1p", sans-serif;
+    font-weight: 400;
+    color: #01678d;
+    border-bottom : 1px #000000 solid;
 }
-/* 【ページ内ナビゲーション】 */
-lnav{
-    grid-area : lnav;
-}
-
-/* 【パンくずリスト】 */
-
-main{
-    grid-area : main;
-}
-
-footer{
-    grid-area : footer;
-}
-
-/*以下、プロフィールの設定*/
-profile{
-    float : center;
-    display: grid;
-    margin: 0;
-    color: #000000; /* 全体の文字色 */
-    font-family: 'Noto Sans JP', sans-serif;
-    background-color : rgba(232, 244, 247, 0.92) ;
-    min-height: 10vh;
-    border: 1px #336797 solid;
-    grid-template-rows: 45px 30px 30px 40px;
-    grid-template-columns : 120px 200px 300px;
-    grid-template-areas:
-        "photo position name   " 
-        "photo faculty  faculty"
-        "photo school   school "
-        "photo comment  comment";
+.topic{
+    display :grid;
+    margin : 0px;
+    padding : 3px 0px;
+    width:100%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 60px calc(100% - 60px);
+    grid-template-areas:"date detail";
+    border-bottom : 1px #666666 dotted;
 }
 
-/*あくまでプロフ用。*/
-img {
-    width: 120px;
-    height: 145px;
-    object-fit: contain;
-}
-.photo{
-    grid-area : photo;
-    object-fit: contain;
-    mix-blend-mode: multiply;
-}
-.job{
-    grid-area : position; 
-    padding : 10px 0px 0px 5px;
-    font-weight: 300;
-    font-size : 20px;
-    border-bottom: 2px #336797 solid;
-    color : rgb(15, 58, 96)
-}
-.name{
-    grid-area : name;   
-    font-weight: 100;
-    font-size : 30px;
-    padding : 0px 0px 0px 5px;
-    font-weight: 100;
-    border-bottom: 2px #336797 solid;
-    color : rgb(15, 58, 96)
-}
-.faculty{
-    grid-area : faculty;
-    font-weight: 300;
+.date{
+    display: flex;
+    align-items: center;
+    grid-area: date;
+    font-family : "M plus 1p",sans-serif;
+    font-weight: 500;
     font-size : 16px;
-    padding : 0px 0px 0px 5px;
+    border-right : 2px #088cbe solid;
+    text-align : center;
+    color : #666666;
 }
-.school{
-    grid-area : school;  
-    font-weight: 300;
-    font-size : 16px;
-    padding : 0px 0px 0px 5px;
+
+.detail{
+    margin-left: 3px;
+/*    display:contents;
+    align-items: center;*/
+    /*やりたいんだけどリンクの位置がバグる*/
+    grid-area: detail;
+    font-family : "Noto Sans JP",sans-serif;
+    font-weight: 400;
+    font-size : 14px;
+    text-align:left;
 }
-.comment{
-    grid-area : comment;
+
+download{
+    width : 45%;
+    height : 350px;
+    overflow:scroll;
+    float : right;
+    margin-right : 8px;
+    padding : 8px;
+    border-bottom : 1px #000000 solid;
+    font-family : "Noto Sans JP",sans-serif;
     font-weight: 300;
     font-size : 14px;
-    padding : 0px 0px 0px 5px;
+}
+
+/*contents*/
+.conte{
+    display :grid;
+    margin : 0px;
+    padding : 6px 0px;
+    width:100%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 40% 60%;
+    grid-template-areas:"obje capt";
+    border-bottom : 1px #666666 dotted;
+}
+/*object*/
+.obje{
+    display: flex;
+    align-items: center;
+    grid-area: obje;
+    font-family : "Noto Sans JP",sans-serif;
+    font-weight: 400;
+    font-size : 16px;
+    border-right : 2px #088cbe solid;
+    color : #666666;
+    text-align : left;
+}
+
+/*caption*/
+.capt{ 
+    margin-left: 3px;
+    padding-left : 3px;
+    display: flex;
+    align-items: center;
+    grid-area: capt;
+    font-family : "Noto Sans JP",sans-serif;
+    font-weight: 400;
+    font-size : 14px;
+    text-align:left;
+}
+
+.imgtwitter{
+    width : 45%;
+    float:right;
+    margin : 0px;
+    padding : 0px;
+    margin : 8px 16px 8px 8px;
+}
+.imgtwitter:hover img{
+  transform: scale(1.02);
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+
+
+/*gnav実験*/
+gnav {
+    height : 35px;
+    position : relative;
+    z-index: 2;/*上二つはIE用に試しに足してみている*/
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    background-image:url("../img/header.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+/*    background-color: #333333;*/
+    border-bottom: 2px #beb607 solid;
+    /* フッタの下境界線 */
+}
+
+gnav ul {
+    padding: 5px 0px 5px 0px;
+    margin: 0px 0px 0px 0px;
+    list-style-type: none;
+    z-index: 1;
+}
+
+gnav li {
+    display: inline-block;
+    /*position: relative; /* IE6用 */
+    font-size: 16px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    padding: 0px 7px 0px 7px;
+}
+
+gnav a {
+    color: #ffffff;
+    /* 文字色 */
+    text-decoration: none;
+    display: block;
+}
+
+gnav a.active{
+    border-bottom: 3px #ffa518 solid;
+    text-decoration: none;
+    display: block;
+}
+
+gnav a:hover {
+    color: #0cc3c3;
+    border-bottom: 3px #f49f19 solid;
+    /* ヘッダメニューの下境界線 */
 }

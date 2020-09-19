@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="archer/css/layout2_mob.css" type="text/css" media="(max-width:700px)">
     <link rel="stylesheet" href="archer/css/parts.css" type="text/css" media="(min-width:701px)">
     <link rel="stylesheet" href="archer/css/layout2.css" type="text/css" media="(min-width:701px)">
+
+    <link rel="stylesheet" href="archer/css/layout_index.css" type="text/css" media="(min-width:701px)">
+    <link rel="stylesheet" href="archer/css/layout_index_mob.css" type="text/css" media="(max-width:700px)">
+    <!--これが優先されるように-->
+    
     <!--Webフォント読み込み-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP:wght@100;300;400;600&family=Roboto:wght@100;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500&display=swap" rel="stylesheet">
@@ -33,7 +38,6 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-177519445-1');
-
     </script>
 </head>
 <!--スマホでのみ、ページ上部に戻るボタンを出す/body外に置く-->
@@ -41,7 +45,7 @@
 
 <body>
     <!--ヘッダ-->
-    <header class="stick"><img src="archer/img/logo.svg" height=20px></header>
+    <!--<header class="stick"><img src="archer/img/logo.svg" height=20px></header>-->
 
     <!--ページ間遷移メニュー-->
     <gnav class="stick">
@@ -55,17 +59,49 @@
             <li><a href="archer/inquiry.html">お問い合わせ</a></li>
         </ul>
     </gnav>
-
-    <!--タイトル-->
-    <eyecatch>
-        <img src="archer/img/profile.png" alt="" border="0" class="photo_eyecatch">
-        <div class="pagetitle"><a href="top">トップページ</a>
-        </div>
-    </eyecatch>
-    <!--本体-->
     <main>
-        <h1>だれか<br>レイアウトを<br>考えて<br>ください</h1>
-        
+        <topcontents>
+            <div class="img1"><img src="archer/img/index-1.png" alt="" border="0" width=100%></div>
+            <div class="img2"><img src="archer/img/index-2.png" alt="" border="0" width=100%> </div>
+            <div class="img3"><a href="archer/about.html"><img src="archer/img/index-3.png" alt="" border="0" width=100%></a></div>
+            <div class="img4"><a href="archer/recruit.html"><img src="archer/img/index-4.png" alt="" border="0" width=100%></a></div>
+        </topcontents>
+        <news>
+        <topictitle>NEWS</topictitle>
+        <div class="topic">
+            <div class="date">2020<br>09/25</div>
+            <div class="detail">ホームページを新調しました！</div>
+        </div>
+            <div class="topic">
+            <div class="date">2020<br>09/16</div>
+            <div class="detail">弊部から野上(4)がインカレに出場、エリミネーションラウンドに残留しました！</div>
+        </div>
+            <div class="topic">
+            <div class="date">2020<br>04/04</div>
+            <div class="detail">新歓パンフレットを公開。あああああああ(→<a href="archer/file/2020pamphlet.pdf">こちら</a>)</div>
+        </div>
+        </news>
+        <download>
+        <topictitle>DOWNLOADS</topictitle>
+            ご自由にお持ち帰りください。<br>
+            <div class="conte">
+                <div class="obje"><a href="archer/file/2020pamphlet.pdf">新歓パンフレット</a></div>
+                <div class="capt">新歓パンフレットです。新入生向け情報がてんこ盛りです！</div>
+            </div>
+            <div class="conte">
+                <div class="obje"><a href="archer/file/">記録用同心円(リンクまだ)</a></div>
+                <div class="capt">的中位置や点数を記録する同心円です。</div>
+            </div>
+            <div class="conte">
+                <div class="obje"><a href="archer/file/">新・記録用同心円(リンクまだ)</a></div>
+                <div class="capt">上の同心円のレイアウトを少し変更しました。</div>
+            </div>
+            <div class="conte">
+                <div class="obje"><a href="archer/file/">インドア用同心円(リンクまだ)</a></div>
+                <div class="capt">インドア用の同心円です。</div>
+            </div>
+        </download>
+        <div class="imgtwitter"><a href ="https://twitter.com/akishin_archery"><img src="archer/img/twitter.png" alt="" border="0" width=100%></a></div>
     </main>
 
     <!--フッター-->
@@ -73,13 +109,11 @@
         <div class="zone1">
             ▶︎<a href="archer/browser.html">対応ブラウザについて</a> <br>▶︎内部向け(パスワード要)<br>&emsp;<a href="http://www.ut-archery.jp/archer/members.cgi/index2.html">部員ページ</a> ｜ <a href="http://www.ut-archery.jp/ob/index.cgi">OB会入口</a>
         </div>
-        <div class="zone2"><img src="archer/img/logo_2.svg" width=100%></div>        
+        <div class="zone2"><img src="archer/img/logo_2.svg" width=100%></div>
         <div class="zone3"><a href="#top">▲Page Top</a></div>
         <div class="cpright">
-        ©️2020- The University of Tokyo Archery Team. All Rights Reserved.</div>
+            ©️2020- The University of Tokyo Archery Team. All Rights Reserved.</div>
     </footer>
     <!--JavaScriptの読み込み、ハンバーガーメニューに利用-->
     <script type="text/javascript" src="hamburger.js"></script>
-</body>
-
-</html>
+</body></html>
